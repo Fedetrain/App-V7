@@ -1,0 +1,614 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="app.federico.traina"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="35" />
+10
+11    <!-- Permissions -->
+12
+13    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+13-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:40:5-79
+13-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:40:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:42:5-67
+14-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:42:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:43:5-79
+15-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:43:22-76
+16
+17    <queries>
+17-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-11:15
+18        <intent>
+18-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-10:18
+19            <action android:name="android.media.action.IMAGE_CAPTURE" />
+19-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-73
+19-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:21-70
+20        </intent>
+21    </queries>
+22
+23    <uses-permission android:name="android.permission.VIBRATE" />
+23-->[:capacitor-haptics] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-66
+23-->[:capacitor-haptics] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:22-63
+24    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+24-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-81
+24-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:22-78
+25    <uses-permission android:name="android.permission.WAKE_LOCK" />
+25-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:5-68
+25-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:22-65
+26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+26-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-77
+26-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:22-74
+27    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+27-->[com.google.android.recaptcha:recaptcha:18.7.0-beta01] C:\Users\feder\.gradle\caches\8.9\transforms\305bcc8d1ca617708b300473dc94f296\transformed\recaptcha-18.7.0-beta01\AndroidManifest.xml:9:5-98
+27-->[com.google.android.recaptcha:recaptcha:18.7.0-beta01] C:\Users\feder\.gradle\caches\8.9\transforms\305bcc8d1ca617708b300473dc94f296\transformed\recaptcha-18.7.0-beta01\AndroidManifest.xml:9:22-95
+28    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+28-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:26:5-82
+28-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:26:22-79
+29
+30    <permission
+30-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+31        android:name="app.federico.traina.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="app.federico.traina.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+35
+36    <application
+36-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:3:5-36:19
+37        android:allowBackup="true"
+37-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:4:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+39        android:extractNativeLibs="false"
+40        android:icon="@mipmap/ic_launcher"
+40-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:5:9-43
+41        android:label="Appò"
+41-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:6:9-29
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:7:9-54
+43        android:supportsRtl="true"
+43-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:8:9-35
+44        android:theme="@style/AppTheme" >
+44-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:9:9-40
+45        <activity
+45-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:10:9-21:20
+46            android:name="app.federico.traina.MainActivity"
+46-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:12:13-41
+47            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation"
+47-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:11:13-140
+48            android:exported="true"
+48-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:16:13-36
+49            android:label="Appò"
+49-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:13:13-33
+50            android:launchMode="singleTask"
+50-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:15:13-44
+51            android:theme="@style/AppTheme.NoActionBarLaunch" >
+51-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:14:13-62
+52            <intent-filter>
+52-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:17:13-20:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:18:17-69
+53-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:18:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:19:17-77
+55-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:19:27-74
+56            </intent-filter>
+57        </activity>
+58
+59        <provider
+60            android:name="androidx.core.content.FileProvider"
+60-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:24:13-62
+61            android:authorities="app.federico.traina.fileprovider"
+61-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:25:13-64
+62            android:exported="false"
+62-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:26:13-37
+63            android:grantUriPermissions="true" >
+63-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:27:13-47
+64            <meta-data
+64-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:28:13-112
+65                android:name="android.support.FILE_PROVIDER_PATHS"
+65-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:28:24-74
+66                android:resource="@xml/file_paths" />
+66-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:28:75-109
+67        </provider>
+68
+69        <meta-data
+69-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:30:9-33:11
+70            android:name="com.google.android.gms.version"
+70-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:31:13-58
+71            android:value="@integer/google_play_services_version" />
+71-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:32:13-66
+72        <meta-data
+72-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:35:9-116
+73            android:name="com.google.android.gms.ads.APPLICATION_ID"
+73-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:35:20-76
+74            android:value="@string/admob_app_id" />
+74-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:35:77-113
+75
+76        <receiver android:name="com.capacitorjs.plugins.localnotifications.TimedNotificationPublisher" />
+76-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:9-106
+76-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:19-103
+77        <receiver android:name="com.capacitorjs.plugins.localnotifications.NotificationDismissReceiver" />
+77-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:9-107
+77-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:19-104
+78        <receiver
+78-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:9-23:20
+79            android:name="com.capacitorjs.plugins.localnotifications.LocalNotificationRestoreReceiver"
+79-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:13-103
+80            android:directBootAware="true"
+80-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:13-43
+81            android:exported="false" >
+81-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:17:13-37
+82            <intent-filter>
+82-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:18:13-22:29
+83                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+83-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:17-86
+83-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:25-83
+84                <action android:name="android.intent.action.BOOT_COMPLETED" />
+84-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:17-79
+84-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:25-76
+85                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+85-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:17-82
+85-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:25-79
+86            </intent-filter>
+87        </receiver>
+88
+89        <service
+89-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-14:19
+90            android:name="com.capacitorjs.plugins.pushnotifications.MessagingService"
+90-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-86
+91            android:exported="false" >
+91-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-37
+92            <intent-filter>
+92-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-13:29
+93                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+93-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:17-78
+93-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:25-75
+94            </intent-filter>
+95        </service>
+96        <service
+96-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:11:9-20:19
+97            android:name="com.google.firebase.components.ComponentDiscoveryService"
+97-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:12:13-84
+98            android:directBootAware="true"
+98-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+99            android:exported="false" >
+99-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:13:13-37
+100            <meta-data
+100-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:14:13-16:85
+101                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfKtxRegistrar"
+101-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:15:17-112
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:16:17-82
+103            <meta-data
+103-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:17:13-19:85
+104                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+104-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:18:17-109
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.firebase:firebase-perf:21.0.4] C:\Users\feder\.gradle\caches\8.9\transforms\41033593e756bda574fee17e3942651d\transformed\firebase-perf-21.0.4\AndroidManifest.xml:19:17-82
+106            <meta-data
+106-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:69:13-71:85
+107                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+107-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:70:17-109
+108                android:value="com.google.firebase.components.ComponentRegistrar" />
+108-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:71:17-82
+109            <meta-data
+109-->[com.google.firebase:firebase-appcheck-playintegrity:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\31a027c4c908b6051c7542aa7985677f\transformed\firebase-appcheck-playintegrity-18.0.0\AndroidManifest.xml:25:13-27:85
+110                android:name="com.google.firebase.components:com.google.firebase.appcheck.playintegrity.FirebaseAppCheckPlayIntegrityRegistrar"
+110-->[com.google.firebase:firebase-appcheck-playintegrity:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\31a027c4c908b6051c7542aa7985677f\transformed\firebase-appcheck-playintegrity-18.0.0\AndroidManifest.xml:26:17-144
+111                android:value="com.google.firebase.components.ComponentRegistrar" />
+111-->[com.google.firebase:firebase-appcheck-playintegrity:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\31a027c4c908b6051c7542aa7985677f\transformed\firebase-appcheck-playintegrity-18.0.0\AndroidManifest.xml:27:17-82
+112            <meta-data
+112-->[com.google.firebase:firebase-appcheck-debug:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\b418d18e273298ba963c76f1b7201814\transformed\firebase-appcheck-debug-18.0.0\AndroidManifest.xml:25:13-27:85
+113                android:name="com.google.firebase.components:com.google.firebase.appcheck.debug.FirebaseAppCheckDebugRegistrar"
+113-->[com.google.firebase:firebase-appcheck-debug:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\b418d18e273298ba963c76f1b7201814\transformed\firebase-appcheck-debug-18.0.0\AndroidManifest.xml:26:17-128
+114                android:value="com.google.firebase.components.ComponentRegistrar" />
+114-->[com.google.firebase:firebase-appcheck-debug:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\b418d18e273298ba963c76f1b7201814\transformed\firebase-appcheck-debug-18.0.0\AndroidManifest.xml:27:17-82
+115            <meta-data
+115-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:57:13-59:85
+116                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+116-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:58:17-122
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:59:17-82
+118            <meta-data
+118-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:60:13-62:85
+119                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+119-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:61:17-119
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:62:17-82
+121            <meta-data
+121-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6b8a30a075e3917390a51c4232b24cd8\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+122                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+122-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6b8a30a075e3917390a51c4232b24cd8\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6b8a30a075e3917390a51c4232b24cd8\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+124            <meta-data
+124-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6b8a30a075e3917390a51c4232b24cd8\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+125                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+125-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6b8a30a075e3917390a51c4232b24cd8\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+126                android:value="com.google.firebase.components.ComponentRegistrar" />
+126-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6b8a30a075e3917390a51c4232b24cd8\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+127            <meta-data
+127-->[com.google.firebase:firebase-crashlytics:19.4.0] C:\Users\feder\.gradle\caches\8.9\transforms\c0693d3f7dc6ac0b50a8c89b4ee6fa34\transformed\firebase-crashlytics-19.4.0\AndroidManifest.xml:15:13-17:85
+128                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+128-->[com.google.firebase:firebase-crashlytics:19.4.0] C:\Users\feder\.gradle\caches\8.9\transforms\c0693d3f7dc6ac0b50a8c89b4ee6fa34\transformed\firebase-crashlytics-19.4.0\AndroidManifest.xml:16:17-126
+129                android:value="com.google.firebase.components.ComponentRegistrar" />
+129-->[com.google.firebase:firebase-crashlytics:19.4.0] C:\Users\feder\.gradle\caches\8.9\transforms\c0693d3f7dc6ac0b50a8c89b4ee6fa34\transformed\firebase-crashlytics-19.4.0\AndroidManifest.xml:17:17-82
+130            <meta-data
+130-->[com.google.firebase:firebase-crashlytics:19.4.0] C:\Users\feder\.gradle\caches\8.9\transforms\c0693d3f7dc6ac0b50a8c89b4ee6fa34\transformed\firebase-crashlytics-19.4.0\AndroidManifest.xml:18:13-20:85
+131                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+131-->[com.google.firebase:firebase-crashlytics:19.4.0] C:\Users\feder\.gradle\caches\8.9\transforms\c0693d3f7dc6ac0b50a8c89b4ee6fa34\transformed\firebase-crashlytics-19.4.0\AndroidManifest.xml:19:17-115
+132                android:value="com.google.firebase.components.ComponentRegistrar" />
+132-->[com.google.firebase:firebase-crashlytics:19.4.0] C:\Users\feder\.gradle\caches\8.9\transforms\c0693d3f7dc6ac0b50a8c89b4ee6fa34\transformed\firebase-crashlytics-19.4.0\AndroidManifest.xml:20:17-82
+133            <meta-data
+133-->[com.google.firebase:firebase-sessions:2.0.8] C:\Users\feder\.gradle\caches\8.9\transforms\e617f3986874067d9d83846ea7b7be8d\transformed\firebase-sessions-2.0.8\AndroidManifest.xml:29:13-31:85
+134                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+134-->[com.google.firebase:firebase-sessions:2.0.8] C:\Users\feder\.gradle\caches\8.9\transforms\e617f3986874067d9d83846ea7b7be8d\transformed\firebase-sessions-2.0.8\AndroidManifest.xml:30:17-117
+135                android:value="com.google.firebase.components.ComponentRegistrar" />
+135-->[com.google.firebase:firebase-sessions:2.0.8] C:\Users\feder\.gradle\caches\8.9\transforms\e617f3986874067d9d83846ea7b7be8d\transformed\firebase-sessions-2.0.8\AndroidManifest.xml:31:17-82
+136            <meta-data
+136-->[com.google.firebase:firebase-config:21.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\b3d5e7ddd9ae0e1a0f8b3cb348b7ed66\transformed\firebase-config-21.5.0\AndroidManifest.xml:29:13-31:85
+137                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+137-->[com.google.firebase:firebase-config:21.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\b3d5e7ddd9ae0e1a0f8b3cb348b7ed66\transformed\firebase-config-21.5.0\AndroidManifest.xml:30:17-128
+138                android:value="com.google.firebase.components.ComponentRegistrar" />
+138-->[com.google.firebase:firebase-config:21.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\b3d5e7ddd9ae0e1a0f8b3cb348b7ed66\transformed\firebase-config-21.5.0\AndroidManifest.xml:31:17-82
+139            <meta-data
+139-->[com.google.firebase:firebase-config:21.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\b3d5e7ddd9ae0e1a0f8b3cb348b7ed66\transformed\firebase-config-21.5.0\AndroidManifest.xml:32:13-34:85
+140                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+140-->[com.google.firebase:firebase-config:21.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\b3d5e7ddd9ae0e1a0f8b3cb348b7ed66\transformed\firebase-config-21.5.0\AndroidManifest.xml:33:17-117
+141                android:value="com.google.firebase.components.ComponentRegistrar" />
+141-->[com.google.firebase:firebase-config:21.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\b3d5e7ddd9ae0e1a0f8b3cb348b7ed66\transformed\firebase-config-21.5.0\AndroidManifest.xml:34:17-82
+142            <meta-data
+142-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\afb30afd677df5553a35a2ca01baf920\transformed\firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+143                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+143-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\afb30afd677df5553a35a2ca01baf920\transformed\firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+144                android:value="com.google.firebase.components.ComponentRegistrar" />
+144-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\afb30afd677df5553a35a2ca01baf920\transformed\firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+145            <meta-data
+145-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\afb30afd677df5553a35a2ca01baf920\transformed\firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+146                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+146-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\afb30afd677df5553a35a2ca01baf920\transformed\firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+147                android:value="com.google.firebase.components.ComponentRegistrar" />
+147-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\afb30afd677df5553a35a2ca01baf920\transformed\firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+148            <meta-data
+148-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\f422d108db5a8d0f3a41b8fbaddd2275\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+149                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+149-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\f422d108db5a8d0f3a41b8fbaddd2275\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+150                android:value="com.google.firebase.components.ComponentRegistrar" />
+150-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\f422d108db5a8d0f3a41b8fbaddd2275\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+151            <meta-data
+151-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+152                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+152-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+153                android:value="com.google.firebase.components.ComponentRegistrar" />
+153-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+154            <meta-data
+154-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\feder\.gradle\caches\8.9\transforms\66ccd74a2717a443a1b2c5eb9ad549f6\transformed\firebase-abt-21.1.1\AndroidManifest.xml:12:13-14:85
+155                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+155-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\feder\.gradle\caches\8.9\transforms\66ccd74a2717a443a1b2c5eb9ad549f6\transformed\firebase-abt-21.1.1\AndroidManifest.xml:13:17-109
+156                android:value="com.google.firebase.components.ComponentRegistrar" />
+156-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\feder\.gradle\caches\8.9\transforms\66ccd74a2717a443a1b2c5eb9ad549f6\transformed\firebase-abt-21.1.1\AndroidManifest.xml:14:17-82
+157            <meta-data
+157-->[com.google.firebase:firebase-datatransport:19.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\bde81f2d3ffb61ad953b1f47e0af6075\transformed\firebase-datatransport-19.0.0\AndroidManifest.xml:25:13-27:85
+158                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+158-->[com.google.firebase:firebase-datatransport:19.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\bde81f2d3ffb61ad953b1f47e0af6075\transformed\firebase-datatransport-19.0.0\AndroidManifest.xml:26:17-115
+159                android:value="com.google.firebase.components.ComponentRegistrar" />
+159-->[com.google.firebase:firebase-datatransport:19.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\bde81f2d3ffb61ad953b1f47e0af6075\transformed\firebase-datatransport-19.0.0\AndroidManifest.xml:27:17-82
+160        </service>
+161
+162        <activity
+162-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:29:9-46:20
+163            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+163-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:30:13-80
+164            android:excludeFromRecents="true"
+164-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:31:13-46
+165            android:exported="true"
+165-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:32:13-36
+166            android:launchMode="singleTask"
+166-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:33:13-44
+167            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+167-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:34:13-72
+168            <intent-filter>
+168-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:35:13-45:29
+169                <action android:name="android.intent.action.VIEW" />
+169-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:36:17-69
+169-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:36:25-66
+170
+171                <category android:name="android.intent.category.DEFAULT" />
+171-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
+171-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
+172                <category android:name="android.intent.category.BROWSABLE" />
+172-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
+172-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
+173
+174                <data
+174-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:41:17-44:51
+175                    android:host="firebase.auth"
+175-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:42:21-49
+176                    android:path="/"
+176-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:43:21-37
+177                    android:scheme="genericidp" />
+177-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:44:21-48
+178            </intent-filter>
+179        </activity>
+180        <activity
+180-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:47:9-64:20
+181            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+181-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:48:13-79
+182            android:excludeFromRecents="true"
+182-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:49:13-46
+183            android:exported="true"
+183-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:50:13-36
+184            android:launchMode="singleTask"
+184-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:51:13-44
+185            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+185-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:52:13-72
+186            <intent-filter>
+186-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:53:13-63:29
+187                <action android:name="android.intent.action.VIEW" />
+187-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:36:17-69
+187-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:36:25-66
+188
+189                <category android:name="android.intent.category.DEFAULT" />
+189-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
+189-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
+190                <category android:name="android.intent.category.BROWSABLE" />
+190-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:39:17-78
+190-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:39:27-75
+191
+192                <data
+192-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:41:17-44:51
+193                    android:host="firebase.auth"
+193-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:42:21-49
+194                    android:path="/"
+194-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:43:21-37
+195                    android:scheme="recaptcha" />
+195-->[com.google.firebase:firebase-auth:23.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\5fc2336e5469ed7ec24e9bf729219f41\transformed\firebase-auth-23.1.0\AndroidManifest.xml:44:21-48
+196            </intent-filter>
+197        </activity>
+198
+199        <service
+199-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+200            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+200-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+201            android:enabled="true"
+201-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+202            android:exported="false" >
+202-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+203            <meta-data
+203-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+204                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+204-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+205                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+205-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+206        </service>
+207
+208        <activity
+208-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+209            android:name="androidx.credentials.playservices.HiddenActivity"
+209-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+210            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+210-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+211            android:enabled="true"
+211-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+212            android:exported="false"
+212-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+213            android:fitsSystemWindows="true"
+213-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+214            android:theme="@style/Theme.Hidden" >
+214-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\feder\.gradle\caches\8.9\transforms\403aef5f605a4c75458139e49b28e28d\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+215        </activity>
+216        <activity
+216-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:23:9-27:75
+217            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+217-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:24:13-93
+218            android:excludeFromRecents="true"
+218-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:25:13-46
+219            android:exported="false"
+219-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:26:13-37
+220            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+220-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:27:13-72
+221        <!--
+222            Service handling Google Sign-In user revocation. For apps that do not integrate with
+223            Google Sign-In, this service will never be started.
+224        -->
+225        <service
+225-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:33:9-37:51
+226            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+226-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:34:13-89
+227            android:exported="true"
+227-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:35:13-36
+228            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+228-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:36:13-107
+229            android:visibleToInstantApps="true" />
+229-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\feder\.gradle\caches\8.9\transforms\3283aa489106f2712954524f6c417643\transformed\play-services-auth-21.2.0\AndroidManifest.xml:37:13-48
+230
+231        <receiver
+231-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:29:9-40:20
+232            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+232-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:30:13-78
+233            android:exported="true"
+233-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:31:13-36
+234            android:permission="com.google.android.c2dm.permission.SEND" >
+234-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:32:13-73
+235            <intent-filter>
+235-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:33:13-35:29
+236                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+236-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:34:17-81
+236-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:34:25-78
+237            </intent-filter>
+238
+239            <meta-data
+239-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:37:13-39:40
+240                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+240-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:38:17-92
+241                android:value="true" />
+241-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:39:17-37
+242        </receiver>
+243        <!--
+244             FirebaseMessagingService performs security checks at runtime,
+245             but set to not exported to explicitly avoid allowing another app to call it.
+246        -->
+247        <service
+247-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:46:9-53:19
+248            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+248-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:47:13-82
+249            android:directBootAware="true"
+249-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:48:13-43
+250            android:exported="false" >
+250-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:49:13-37
+251            <intent-filter android:priority="-500" >
+251-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-13:29
+252                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+252-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:17-78
+252-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:25-75
+253            </intent-filter>
+254        </service>
+255
+256        <activity
+256-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\89207502b085cae4316e3209262f6da6\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+257            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+257-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\89207502b085cae4316e3209262f6da6\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+258            android:exported="false"
+258-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\89207502b085cae4316e3209262f6da6\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+259            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+259-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\feder\.gradle\caches\8.9\transforms\89207502b085cae4316e3209262f6da6\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+260
+261        <provider
+261-->[androidx.emoji2:emoji2:1.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\e30a783b2887d988f7a5b32f04ac09cd\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+262            android:name="androidx.startup.InitializationProvider"
+262-->[androidx.emoji2:emoji2:1.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\e30a783b2887d988f7a5b32f04ac09cd\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+263            android:authorities="app.federico.traina.androidx-startup"
+263-->[androidx.emoji2:emoji2:1.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\e30a783b2887d988f7a5b32f04ac09cd\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+264            android:exported="false" >
+264-->[androidx.emoji2:emoji2:1.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\e30a783b2887d988f7a5b32f04ac09cd\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+265            <meta-data
+265-->[androidx.emoji2:emoji2:1.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\e30a783b2887d988f7a5b32f04ac09cd\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+266                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+266-->[androidx.emoji2:emoji2:1.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\e30a783b2887d988f7a5b32f04ac09cd\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+267                android:value="androidx.startup" />
+267-->[androidx.emoji2:emoji2:1.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\e30a783b2887d988f7a5b32f04ac09cd\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+268            <meta-data
+268-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\feder\.gradle\caches\8.9\transforms\63661c52d45b255ef4b5804085cef9a9\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+269                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+269-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\feder\.gradle\caches\8.9\transforms\63661c52d45b255ef4b5804085cef9a9\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+270                android:value="androidx.startup" />
+270-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\feder\.gradle\caches\8.9\transforms\63661c52d45b255ef4b5804085cef9a9\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+271            <meta-data
+271-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+272                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+272-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+273                android:value="androidx.startup" />
+273-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+274        </provider>
+275
+276        <service
+276-->[com.google.firebase:firebase-sessions:2.0.8] C:\Users\feder\.gradle\caches\8.9\transforms\e617f3986874067d9d83846ea7b7be8d\transformed\firebase-sessions-2.0.8\AndroidManifest.xml:22:9-25:40
+277            android:name="com.google.firebase.sessions.SessionLifecycleService"
+277-->[com.google.firebase:firebase-sessions:2.0.8] C:\Users\feder\.gradle\caches\8.9\transforms\e617f3986874067d9d83846ea7b7be8d\transformed\firebase-sessions-2.0.8\AndroidManifest.xml:23:13-80
+278            android:enabled="true"
+278-->[com.google.firebase:firebase-sessions:2.0.8] C:\Users\feder\.gradle\caches\8.9\transforms\e617f3986874067d9d83846ea7b7be8d\transformed\firebase-sessions-2.0.8\AndroidManifest.xml:24:13-35
+279            android:exported="false" />
+279-->[com.google.firebase:firebase-sessions:2.0.8] C:\Users\feder\.gradle\caches\8.9\transforms\e617f3986874067d9d83846ea7b7be8d\transformed\firebase-sessions-2.0.8\AndroidManifest.xml:25:13-37
+280
+281        <provider
+281-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+282            android:name="com.google.firebase.provider.FirebaseInitProvider"
+282-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+283            android:authorities="app.federico.traina.firebaseinitprovider"
+283-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+284            android:directBootAware="true"
+284-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+285            android:exported="false"
+285-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+286            android:initOrder="100" />
+286-->[com.google.firebase:firebase-common:21.0.0] C:\Users\feder\.gradle\caches\8.9\transforms\6d0c6cd1b8fd64dcc2cc34f2fee43cb0\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+287
+288        <receiver
+288-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+289            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+289-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+290            android:directBootAware="false"
+290-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+291            android:enabled="true"
+291-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+292            android:exported="true"
+292-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+293            android:permission="android.permission.DUMP" >
+293-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+294            <intent-filter>
+294-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+295                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+295-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+295-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+296            </intent-filter>
+297            <intent-filter>
+297-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+298                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+298-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+298-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+299            </intent-filter>
+300            <intent-filter>
+300-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+301                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+301-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+301-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+302            </intent-filter>
+303            <intent-filter>
+303-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+304                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+304-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+304-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\feder\.gradle\caches\8.9\transforms\7aa75699fa6145ae794717968fa40dba\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+305            </intent-filter>
+306        </receiver>
+307
+308        <service
+308-->[com.google.android.datatransport:transport-backend-cct:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\777576c2bab50eb72af047b504fb1ba4\transformed\transport-backend-cct-3.3.0\AndroidManifest.xml:26:9-32:19
+309            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+309-->[com.google.android.datatransport:transport-backend-cct:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\777576c2bab50eb72af047b504fb1ba4\transformed\transport-backend-cct-3.3.0\AndroidManifest.xml:27:13-103
+310            android:exported="false" >
+310-->[com.google.android.datatransport:transport-backend-cct:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\777576c2bab50eb72af047b504fb1ba4\transformed\transport-backend-cct-3.3.0\AndroidManifest.xml:28:13-37
+311            <meta-data
+311-->[com.google.android.datatransport:transport-backend-cct:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\777576c2bab50eb72af047b504fb1ba4\transformed\transport-backend-cct-3.3.0\AndroidManifest.xml:29:13-31:39
+312                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+312-->[com.google.android.datatransport:transport-backend-cct:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\777576c2bab50eb72af047b504fb1ba4\transformed\transport-backend-cct-3.3.0\AndroidManifest.xml:30:17-94
+313                android:value="cct" />
+313-->[com.google.android.datatransport:transport-backend-cct:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\777576c2bab50eb72af047b504fb1ba4\transformed\transport-backend-cct-3.3.0\AndroidManifest.xml:31:17-36
+314        </service>
+315        <service
+315-->[com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\382dbabd99e9956fd44e0620596f6a6f\transformed\transport-runtime-3.3.0\AndroidManifest.xml:24:9-28:19
+316            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+316-->[com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\382dbabd99e9956fd44e0620596f6a6f\transformed\transport-runtime-3.3.0\AndroidManifest.xml:25:13-117
+317            android:exported="false"
+317-->[com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\382dbabd99e9956fd44e0620596f6a6f\transformed\transport-runtime-3.3.0\AndroidManifest.xml:26:13-37
+318            android:permission="android.permission.BIND_JOB_SERVICE" >
+318-->[com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\382dbabd99e9956fd44e0620596f6a6f\transformed\transport-runtime-3.3.0\AndroidManifest.xml:27:13-69
+319        </service>
+320
+321        <receiver
+321-->[com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\382dbabd99e9956fd44e0620596f6a6f\transformed\transport-runtime-3.3.0\AndroidManifest.xml:30:9-32:40
+322            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+322-->[com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\382dbabd99e9956fd44e0620596f6a6f\transformed\transport-runtime-3.3.0\AndroidManifest.xml:31:13-132
+323            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+323-->[com.google.android.datatransport:transport-runtime:3.3.0] C:\Users\feder\.gradle\caches\8.9\transforms\382dbabd99e9956fd44e0620596f6a6f\transformed\transport-runtime-3.3.0\AndroidManifest.xml:32:13-37
+324        <activity
+324-->[com.google.android.play:core-common:2.0.3] C:\Users\feder\.gradle\caches\8.9\transforms\45e58c4342e2bda8f388163184b8a577\transformed\core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+325            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+325-->[com.google.android.play:core-common:2.0.3] C:\Users\feder\.gradle\caches\8.9\transforms\45e58c4342e2bda8f388163184b8a577\transformed\core-common-2.0.3\AndroidManifest.xml:15:13-93
+326            android:exported="false"
+326-->[com.google.android.play:core-common:2.0.3] C:\Users\feder\.gradle\caches\8.9\transforms\45e58c4342e2bda8f388163184b8a577\transformed\core-common-2.0.3\AndroidManifest.xml:16:13-37
+327            android:stateNotNeeded="true"
+327-->[com.google.android.play:core-common:2.0.3] C:\Users\feder\.gradle\caches\8.9\transforms\45e58c4342e2bda8f388163184b8a577\transformed\core-common-2.0.3\AndroidManifest.xml:17:13-42
+328            android:theme="@style/Theme.PlayCore.Transparent" />
+328-->[com.google.android.play:core-common:2.0.3] C:\Users\feder\.gradle\caches\8.9\transforms\45e58c4342e2bda8f388163184b8a577\transformed\core-common-2.0.3\AndroidManifest.xml:18:13-62
+329    </application>
+330
+331</manifest>

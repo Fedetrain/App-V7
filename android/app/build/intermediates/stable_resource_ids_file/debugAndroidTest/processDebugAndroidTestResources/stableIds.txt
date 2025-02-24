@@ -1,0 +1,2 @@
+app.federico.traina.test:style/WhiteBackgroundTheme = 0x7f010001
+app.federico.traina.test:style/WhiteBackgroundDialogTheme = 0x7f010000

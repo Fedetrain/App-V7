@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Appò</string>
+    <string name="title_activity_main">Appò</string>
+    <string name="package_name">app.federico.traina</string>
+    <string name="custom_url_scheme">app.federico.traina</string>
+    <string name="admob_app_id">ca-app-pub-9010134003844365~9595974409</string>
+    <string name="server_client_id">175265749386–07c82f8tcdmgltsbilki0fnnspaam1tj.apps.googleusercontent.com</string>
+</resources>

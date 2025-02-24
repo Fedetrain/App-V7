@@ -1,0 +1,6 @@
+app.federico.traina.test.app-annotation-experimental-1.3.0-0 C:\Users\feder\.gradle\caches\8.9\transforms\6b4f1754f25ee04a7edede456e1bdc4c\transformed\annotation-experimental-1.3.0\res
+app.federico.traina.test.app-core-1.5.0-1 C:\Users\feder\.gradle\caches\8.9\transforms\75444049c5e4e5df6c16e5ca93042fe8\transformed\core-1.5.0\res
+app.federico.traina.test.app-androidTest-2 C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\build\generated\res\resValues\androidTest\debug
+app.federico.traina.test.app-mergeDebugAndroidTestResources-3 C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+app.federico.traina.test.app-mergeDebugAndroidTestResources-4 C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+app.federico.traina.test.app-debugAndroidTest-5 C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-ldpi_ic_launcher.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/drawable_icon_notification.png.flat",
+        "source": "app.federico.traina.app-main-48:/drawable/icon_notification.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/xml_config.xml.flat",
+        "source": "app.federico.traina.app-main-48:/xml/config.xml"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/drawable_ic_launcher_background.xml.flat",
+        "source": "app.federico.traina.app-main-48:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/drawable_splash.png.flat",
+        "source": "app.federico.traina.app-main-48:/drawable/splash.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/layout_activity_main.xml.flat",
+        "source": "app.federico.traina.app-main-48:/layout/activity_main.xml"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-ldpi_ic_launcher_foreground.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-hdpi_logo.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-hdpi/logo.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-ldpi_ic_launcher_background.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-ldpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxhdpi_ic_launcher_background.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-ldpi_ic_launcher_round.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-ldpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "app.federico.traina.app-pngs-41:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/xml_file_paths.xml.flat",
+        "source": "app.federico.traina.app-main-48:/xml/file_paths.xml"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "app.federico.traina.app-merged_res-46:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "app.federico.traina.app-main-48:/mipmap-mdpi/ic_launcher_foreground.png"
+    }
+]

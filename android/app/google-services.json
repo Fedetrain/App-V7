@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "175265749386",
+    "project_id": "appuntamentiv2",
+    "storage_bucket": "appuntamentiv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175265749386:android:838bfc4350b9d070041073",
+        "android_client_info": {
+          "package_name": "app.federico.traina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175265749386-4u1i2cgkfspb9hgks02dic29ppavus2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.federico.traina",
+            "certificate_hash": "0bd1253825594e2dce1262c9981a70182b44b4ea"
+          }
+        },
+        {
+          "client_id": "175265749386-k0nlogvpf9ir30pufoabdahae9a813a0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGc9fOwU--8B2ZPfc8SCiIUveGi0xV_EY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175265749386-07c82f8tcdmgltsbilki0fnnspaam1tj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "175265749386-j707k56685qvrn37bqllhala7gig0imp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.federico.traina"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-9010134003844365~9595974409"
+    }
+  ],
+  "configuration_version": "1"
+}
