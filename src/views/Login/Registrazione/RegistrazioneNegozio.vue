@@ -225,7 +225,7 @@ const registerUser = async () => {
 
     try {
       if (isGoogleLogged.value==true){
-        await registraUtenteNelDb()
+        await registraUtenteNelDb(auth.currentUser)
         return
       }
       
@@ -368,8 +368,15 @@ const aggiornaCitta = (nuovaCitta) => {
 
 const presentAlertEmailDiVerifica = async () => {
   const alert = await alertController.create({
-    header: 'Controlla la tua email',
-    message: 'IMPORTANTE : \n 1) Premi sul link presente nella email per verificare la tua identità. Non potrai fare il login fino a quando non confermi.\n 2) Non potrai accedere fino il la tua registrazione non verra confermata.Prova ad accedere di tanto in tanto per verificare',
+    header: '📧 Controlla la tua email',
+message: '🔹 **IMPORTANTE** 🔹\n\n' +
+         '1️⃣ **Verifica la tua identità:**\n' +
+         '   Premi sul link presente nell\'email per confermare il tuo account.\n' +
+         '   **Non potrai effettuare il login finché non completi la verifica.**\n\n' +
+         '2️⃣ **Attendi la conferma della registrazione:**\n' +
+         '   L\'accesso sarà possibile solo dopo l\'approvazione della registrazione.\n' +
+         '   **Prova ad accedere di tanto in tanto per verificare lo stato.**',
+
     buttons: [
       {
         text: 'OK',

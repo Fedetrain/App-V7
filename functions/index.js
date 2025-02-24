@@ -57,7 +57,7 @@ exports.onPrenotazioneDateUpdated = onDocumentUpdated(
 
       try {
         // Recupera il token dalla collection Gestore
-        const userDocRef = admin.firestore().collection("Gestore")
+        const userDocRef = admin.firestore().collection("Cliente")
             .doc(proprietarioUid);
         const userDoc = await userDocRef.get();
 

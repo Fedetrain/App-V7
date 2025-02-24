@@ -129,7 +129,7 @@ import { getFirestore, doc, getDoc,Timestamp,addDoc,collection, query, where, ge
 import { getAuth } from "firebase/auth";
 import BackButton from '/src/views/Components/BackButton.vue';
 import { LocalNotifications } from '@capacitor/local-notifications';
-
+import { alarmOutline, calendarOutline, chevronBack, chevronForward, saveOutline } from 'ionicons/icons';
 
 const store = useStore();
 const db = getFirestore();
@@ -161,7 +161,38 @@ const isOpen = ref(false);
 
 const nomeNegozio = store.getters.getNomeNegozio;
 
+function timeToMinutes(time) {
+  const [hours, minutes] = time.split(':').map(Number);
+  return hours * 60 + minutes;
+}
 
+function splitIntoBlocks(arraySet) {
+  if (arraySet.length === 0) return [];
+  
+  const blocks = [];
+  let currentBlock = [arraySet[0]];
+  
+  for (let i = 1; i < arraySet.length; i++) {
+    const prevTime = arraySet[i - 1];
+    const currentTime = arraySet[i];
+    
+    const prevMinutes = timeToMinutes(prevTime);
+    const currentMinutes = timeToMinutes(currentTime);
+    
+    if (currentMinutes - prevMinutes === 15) {
+      currentBlock.push(currentTime);
+    } else {
+      blocks.push(currentBlock);
+      currentBlock = [currentTime];
+    }
+  }
+  
+  if (currentBlock.length > 0) {
+    blocks.push(currentBlock);
+  }
+  
+  return blocks;
+}
 
 
 const recuperaFerie = async () => {
@@ -520,11 +551,21 @@ function trovaOrariNonPrenotatiConsecutivi(durata, setDefinitivo) {
 function rimuoviUltimiOrari(orariNonPrenotatiConsecutivi, durataServizioSelezionato) {
   const arraySet = Array.from(orariNonPrenotatiConsecutivi);
   const x = durataServizioSelezionato / 15;
-  const nuoviElementi = arraySet.slice(0, arraySet.length - x);
+  
+  const blocks = splitIntoBlocks(arraySet);
+  const trimmedBlocks = [];
+  
+  blocks.forEach(block => {
+    if (block.length >= x) {
+      const trimmedBlock = block.slice(0, block.length - x);
+      trimmedBlocks.push(...trimmedBlock);
+    }
+  });
+  
   orariNonPrenotatiConsecutivi.clear();
-  nuoviElementi.forEach(elemento => orariNonPrenotatiConsecutivi.add(elemento));
-  console.log("Ultimi orari rimossi:", x);
-  console.log("Nuovi orari non prenotati consecutivi:", orariNonPrenotatiConsecutivi);
+  trimmedBlocks.forEach(elemento => orariNonPrenotatiConsecutivi.add(elemento));
+  
+  console.log("Ultimi orari rimossi da ogni blocco:", x);
 }
 
 function rimuoviUltimiOrar(orariNonPrenotatiConsecutivi, orariArray, durata) {

@@ -436,10 +436,12 @@ const eliminaFotoMenu = async (photo) => {
 
 .image-container {
   position: relative;
+  width: 100%;
+
 }
 
 .img {
-  width: 220px;
+  width: 100%;
   height: 220px;
   border-radius: 16px;
   object-fit: cover;
@@ -657,19 +659,5 @@ ion-textarea {
   color: #fff;
 }
 
-/* Aggiustamenti responsive */
-@media (max-width: 600px) {
-  .img {
-    width: 180px;
-    height: 180px;
-  }
 
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  .menu-photo {
-    width: 140px;
-  }
-}
 </style>

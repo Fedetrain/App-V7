@@ -18,6 +18,9 @@
 
     <ion-content class="ion-padding-horizontal">
       <!-- Prenotazioni Da Accettare -->
+      <p v-if="prenotazioniDaAccettare.length == 0 " style="display: flex; justify-content: center; align-items: center; height: 100vh; font-size: 18px; font-weight: bold; color: #555;">
+  Nessuna prenotazione disponibile
+</p>
       <div v-if="segmentValue === 'daAccettare'" class="section">
         <ion-list lines="none">
           <ion-item 
@@ -39,6 +42,7 @@
               
               <div class="prenotazione-details">
                 <div class="datetime-container">
+                  <p>Tocca l'orario per modificarlo</p>
                   <ion-datetime-button 
                     :datetime="'datetime-' + prenotazione.id" 
                     class="datetime-button"
@@ -94,7 +98,7 @@
                   Dettaglio ordine
                 </ion-button>
                 <div class="decision-buttons">
-                  <ion-button 
+                  <ion-button
                     color="success" 
                     @click="accettaPrenotazione(prenotazione.id)"
                     class="decision-button"
@@ -119,6 +123,11 @@
 
       <!-- Prenotazioni Accettate -->
       <div v-if="segmentValue === 'accettati'" class="section">
+
+        <p v-if="prenotazioniAccettate.length == 0 " style="display: flex; justify-content: center; align-items: center; height: 100vh; font-size: 18px; font-weight: bold; color: #555;">
+  Nessuna prenotazione disponibile
+</p>
+
         <ion-list lines="none">
           <ion-item 
             v-for="prenotazione in prenotazioniAccettate" 
@@ -138,6 +147,7 @@
 
               <div class="prenotazione-details">
                 <div class="datetime-container">
+                  <p>Tocca l'orario per modificarlo</p>
                   <ion-datetime-button 
                     :datetime="'datetime-' + prenotazione.id" 
                     class="datetime-button"

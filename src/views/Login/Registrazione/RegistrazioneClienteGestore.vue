@@ -116,6 +116,10 @@
 
 <style scoped>
 
+.form-container{
+  margin-bottom: 200px;
+}
+
 
 .password-container{
   display: flex;

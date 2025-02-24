@@ -98,6 +98,9 @@ const toggleOrario = (giorno, orario) => {
     ? currentOrari.filter(t => t !== orario)
     : [...currentOrari, orario];
   
+  
+    newOrari.sort((a, b) => a.localeCompare(b));
+
   orariSalvati.set(giorno, newOrari);
 };
 

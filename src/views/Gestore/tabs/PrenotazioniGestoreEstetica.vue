@@ -374,6 +374,7 @@
     try {
       let sortedOrari = Array.from(orariPerGiorno).sort();
     for (let i = 0; i < sortedOrari.length; i++) {
+      
       let slot = sortedOrari[i];
       // Verifica se esiste una prenotazione che inizia in questo slot
       let prenotazioneCorrispondente = Array.from(prenotazioni).find(prenot => prenot.oraInizio === slot);

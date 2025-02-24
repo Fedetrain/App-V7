@@ -424,7 +424,7 @@ const submitOrder = async () => {
 
     await addDoc(collection(db, 'Prenotazioni'), prenotazioneData);
     
-    await showSuccessToast('Prenotazione inviata con successo!');
+    await showSuccessToast('Prenotazione caricata. Attendi che il gestore accetti la prenotazione!');
     router.back();
   } catch (error) {
     showErrorToast('Errore durante l\'invio della prenotazione');
@@ -468,7 +468,7 @@ const toggleExtraInfo = () => {
 const showSuccessToast = async (message) => {
   const toast = await toastController.create({
     message,
-    duration: 3000,
+    duration: 5000,
     color: 'success',
     position: 'top',
     icon: checkmarkCircleOutline,

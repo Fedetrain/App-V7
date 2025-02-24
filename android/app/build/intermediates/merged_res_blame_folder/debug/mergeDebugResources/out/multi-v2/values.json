@@ -74,20 +74,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1\\android\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\node_modules\\@capacitor\\android\\capacitor\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values\\values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "100,175,251,331",
+                        "endColumns": "74,75,79,79",
+                        "endOffsets": "170,246,326,406"
                     },
                     "to": {
-                        "startLines": "641",
-                        "startColumns": "4",
-                        "startOffsets": "34878",
-                        "endColumns": "56",
-                        "endOffsets": "34930"
+                        "startLines": "585,586,587,2098",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "30872,30947,31023,152177",
+                        "endColumns": "74,75,79,79",
+                        "endOffsets": "30942,31018,31098,152252"
                     }
                 },
                 {
@@ -220,22 +220,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
                     "from": {
-                        "startLines": "4,11,18",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "97,424,682",
-                        "endLines": "9,15,20",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "416,672,830"
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,712",
+                        "endColumns": "143,81,103,108,119,97,74",
+                        "endOffsets": "194,276,380,489,609,707,782"
                     },
                     "to": {
-                        "startLines": "2143,2149,2154",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "156207,156491,156740",
-                        "endLines": "2148,2153,2156",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "156486,156735,156886"
+                        "startLines": "1972,1984,1985,1986,1987,1988,2105",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "134716,135785,135867,135971,136080,136200,153120",
+                        "endColumns": "143,81,103,108,119,97,74",
+                        "endOffsets": "134855,135862,135966,136075,136195,136293,153190"
                     }
                 },
                 {
@@ -255,6 +253,23 @@
                         "endLines": "9429,9435,9445,12071,12075",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "652668,652846,653130,766107,766234"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "6,2,5,4,7,3",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "283,57,216,154,364,100",
+                        "endColumns": "79,41,65,60,117,52",
+                        "endOffsets": "358,94,277,210,477,148"
+                    },
+                    "to": {
+                        "startLines": "1928,1932,1971,2099,2112,2116",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "129575,129904,134650,152257,153756,154293",
+                        "endColumns": "79,41,65,60,117,52",
+                        "endOffsets": "129650,129941,134711,152313,153869,154341"
                     }
                 },
                 {
@@ -330,22 +345,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1\\node_modules\\@capacitor\\splash-screen\\android\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values\\values.xml",
+                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\generated\\res\\injectCrashlyticsMappingFileIdDebug\\values\\com_google_firebase_crashlytics_mappingfileid.xml",
                     "from": {
-                        "startLines": "2,4,7",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,141,289",
-                        "endLines": "3,6,9",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "136,284,448"
+                        "startLines": "8",
+                        "startColumns": "0",
+                        "startOffsets": "286",
+                        "endColumns": "173",
+                        "endOffsets": "459"
                     },
                     "to": {
-                        "startLines": "9292,9294,9297",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "647810,647896,648044",
-                        "endLines": "9293,9296,9299",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "647891,648039,648203"
+                        "startLines": "1951",
+                        "startColumns": "4",
+                        "startOffsets": "132073",
+                        "endColumns": "175",
+                        "endOffsets": "132244"
                     }
                 },
                 {
@@ -368,6 +381,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "4,11,18",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "97,424,682",
+                        "endLines": "9,15,20",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "416,672,830"
+                    },
+                    "to": {
+                        "startLines": "2143,2149,2154",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "156207,156491,156740",
+                        "endLines": "2148,2153,2156",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "156486,156735,156886"
+                    }
+                },
+                {
                     "source": "C:\\Users\\feder\\.gradle\\caches\\8.9\\transforms\\49cad476b607767859974b1af083b961\\transformed\\lifecycle-viewmodel-2.6.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -382,23 +414,6 @@
                         "startOffsets": "122623",
                         "endColumns": "49",
                         "endOffsets": "122668"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1\\android\\app\\build\\generated\\res\\injectCrashlyticsMappingFileIdDebug\\values\\com_google_firebase_crashlytics_mappingfileid.xml",
-                    "from": {
-                        "startLines": "8",
-                        "startColumns": "0",
-                        "startOffsets": "286",
-                        "endColumns": "173",
-                        "endOffsets": "459"
-                    },
-                    "to": {
-                        "startLines": "1951",
-                        "startColumns": "4",
-                        "startOffsets": "132073",
-                        "endColumns": "175",
-                        "endOffsets": "132244"
                     }
                 },
                 {
@@ -476,23 +491,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1\\android\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,712",
-                        "endColumns": "143,81,103,108,119,97,74",
-                        "endOffsets": "194,276,380,489,609,707,782"
-                    },
-                    "to": {
-                        "startLines": "1972,1984,1985,1986,1987,1988,2105",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "134716,135785,135867,135971,136080,136200,153120",
-                        "endColumns": "143,81,103,108,119,97,74",
-                        "endOffsets": "134855,135862,135966,136075,136195,136293,153190"
-                    }
-                },
-                {
                     "source": "C:\\Users\\feder\\.gradle\\caches\\8.9\\transforms\\d3190341edad1712f61562c503e7b95e\\transformed\\core-splashscreen-1.0.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,23,32,45",
@@ -509,23 +507,6 @@
                         "endLines": "437,460,547,548,549,550,1698,1699,1700,1701,1702,1703,1704,1833,2557,2558,2559,5537,5539,6568,6581,6585",
                         "endColumns": "59,58,68,71,62,71,73,75,75,76,70,68,70,67,80,91,92,12,12,12,12,12",
                         "endOffsets": "22500,23764,28231,28303,28366,28438,115460,115536,115612,115689,115760,115829,115900,123171,183223,183315,183408,392992,393113,464286,465061,465334"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1\\node_modules\\@capacitor\\android\\capacitor\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "100,175,251,331",
-                        "endColumns": "74,75,79,79",
-                        "endOffsets": "170,246,326,406"
-                    },
-                    "to": {
-                        "startLines": "585,586,587,2098",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "30872,30947,31023,152177",
-                        "endColumns": "74,75,79,79",
-                        "endOffsets": "30942,31018,31098,152252"
                     }
                 },
                 {
@@ -548,20 +529,39 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
                     "from": {
-                        "startLines": "6,2,5,4,7,3",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "283,57,216,154,364,100",
-                        "endColumns": "79,41,65,60,117,52",
-                        "endOffsets": "358,94,277,210,477,148"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
                     },
                     "to": {
-                        "startLines": "1928,1932,1971,2099,2112,2116",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "129575,129904,134650,152257,153756,154293",
-                        "endColumns": "79,41,65,60,117,52",
-                        "endOffsets": "129650,129941,134711,152313,153869,154341"
+                        "startLines": "641",
+                        "startColumns": "4",
+                        "startOffsets": "34878",
+                        "endColumns": "56",
+                        "endOffsets": "34930"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\node_modules\\@capacitor\\splash-screen\\android\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,4,7",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,141,289",
+                        "endLines": "3,6,9",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "136,284,448"
+                    },
+                    "to": {
+                        "startLines": "9292,9294,9297",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "647810,647896,648044",
+                        "endLines": "9293,9296,9299",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "647891,648039,648203"
                     }
                 },
                 {

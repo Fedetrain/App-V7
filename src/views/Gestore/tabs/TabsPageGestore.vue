@@ -198,7 +198,7 @@ const updateNotificationToken = async (token) => {
       return;
     }
     const userId = user.uid;
-    const userDocRef = doc(db, "Cliente", userId);
+    const userDocRef = doc(db, "Gestore", userId);
     await setDoc(userDocRef, { notificationToken: token }, { merge: true });
   } catch (error) {
     console.error("Error updating token: ", error);

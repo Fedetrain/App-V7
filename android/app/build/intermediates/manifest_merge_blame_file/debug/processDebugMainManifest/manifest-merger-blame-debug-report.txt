@@ -11,37 +11,37 @@
 11    <!-- Permissions -->
 12
 13    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-13-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:40:5-79
-13-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:40:22-76
+13-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:40:5-79
+13-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:40:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:42:5-67
-14-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:42:22-64
+14-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:42:5-67
+14-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:42:22-64
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:43:5-79
-15-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:43:22-76
+15-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:43:5-79
+15-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:43:22-76
 16
 17    <queries>
-17-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-11:15
+17-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-11:15
 18        <intent>
-18-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-10:18
+18-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-10:18
 19            <action android:name="android.media.action.IMAGE_CAPTURE" />
-19-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-73
-19-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:21-70
+19-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-73
+19-->[:capacitor-camera] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\camera\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:21-70
 20        </intent>
 21    </queries>
 22
 23    <uses-permission android:name="android.permission.VIBRATE" />
-23-->[:capacitor-haptics] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-66
-23-->[:capacitor-haptics] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-63
+23-->[:capacitor-haptics] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-66
+23-->[:capacitor-haptics] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-63
 24    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-24-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-81
-24-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-78
+24-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-81
+24-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-78
 25    <uses-permission android:name="android.permission.WAKE_LOCK" />
-25-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-68
-25-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-65
+25-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-68
+25-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-65
 26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-26-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:5-77
-26-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:22-74
+26-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:5-77
+26-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:22-74
 27    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> <!-- Required by older versions of Google Play services to create IID tokens -->
 27-->[com.google.android.recaptcha:recaptcha:18.7.0-beta01] C:\Users\feder\.gradle\caches\8.9\transforms\305bcc8d1ca617708b300473dc94f296\transformed\recaptcha-18.7.0-beta01\AndroidManifest.xml:9:5-98
 27-->[com.google.android.recaptcha:recaptcha:18.7.0-beta01] C:\Users\feder\.gradle\caches\8.9\transforms\305bcc8d1ca617708b300473dc94f296\transformed\recaptcha-18.7.0-beta01\AndroidManifest.xml:9:22-95
@@ -61,119 +61,119 @@
 34-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 35
 36    <application
-36-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:3:5-36:19
+36-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:3:5-36:19
 37        android:allowBackup="true"
-37-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:4:9-35
+37-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:4:9-35
 38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 38-->[androidx.core:core:1.13.0] C:\Users\feder\.gradle\caches\8.9\transforms\27f61e9d6411566f1a9abc2a10b042f4\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 39        android:debuggable="true"
 40        android:extractNativeLibs="false"
 41        android:icon="@mipmap/ic_launcher"
-41-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:5:9-43
+41-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:5:9-43
 42        android:label="Appò"
-42-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:6:9-29
+42-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:6:9-29
 43        android:roundIcon="@mipmap/ic_launcher_round"
-43-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:7:9-54
+43-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:7:9-54
 44        android:supportsRtl="true"
-44-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:8:9-35
+44-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:8:9-35
 45        android:testOnly="true"
 46        android:theme="@style/AppTheme" >
-46-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:9:9-40
+46-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:9:9-40
 47        <activity
-47-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:10:9-21:20
+47-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:10:9-21:20
 48            android:name="app.federico.traina.MainActivity"
-48-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:12:13-41
+48-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:12:13-41
 49            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation"
-49-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:11:13-140
+49-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:11:13-140
 50            android:exported="true"
-50-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:16:13-36
+50-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:16:13-36
 51            android:label="Appò"
-51-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:13:13-33
+51-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:13:13-33
 52            android:launchMode="singleTask"
-52-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:15:13-44
+52-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:15:13-44
 53            android:theme="@style/AppTheme.NoActionBarLaunch" >
-53-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:14:13-62
+53-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:14:13-62
 54            <intent-filter>
-54-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:17:13-20:29
+54-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:17:13-20:29
 55                <action android:name="android.intent.action.MAIN" />
-55-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:18:17-69
-55-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:18:25-66
+55-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:18:17-69
+55-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:18:25-66
 56
 57                <category android:name="android.intent.category.LAUNCHER" />
-57-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:19:17-77
-57-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:19:27-74
+57-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:19:17-77
+57-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:19:27-74
 58            </intent-filter>
 59        </activity>
 60
 61        <provider
 62            android:name="androidx.core.content.FileProvider"
-62-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:24:13-62
+62-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:24:13-62
 63            android:authorities="app.federico.traina.fileprovider"
-63-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:25:13-64
+63-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:25:13-64
 64            android:exported="false"
-64-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:26:13-37
+64-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:26:13-37
 65            android:grantUriPermissions="true" >
-65-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:27:13-47
+65-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:27:13-47
 66            <meta-data
-66-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:28:13-112
+66-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:28:13-112
 67                android:name="android.support.FILE_PROVIDER_PATHS"
-67-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:28:24-74
+67-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:28:24-74
 68                android:resource="@xml/file_paths" />
-68-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:28:75-109
+68-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:28:75-109
 69        </provider>
 70
 71        <meta-data
-71-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:30:9-33:11
+71-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:30:9-33:11
 72            android:name="com.google.android.gms.version"
-72-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:31:13-58
+72-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:31:13-58
 73            android:value="@integer/google_play_services_version" />
-73-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:32:13-66
+73-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:32:13-66
 74        <meta-data
-74-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:35:9-116
+74-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:35:9-116
 75            android:name="com.google.android.gms.ads.APPLICATION_ID"
-75-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:35:20-76
+75-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:35:20-76
 76            android:value="@string/admob_app_id" />
-76-->C:\Users\feder\Desktop\Ionic\Appostu-1\android\app\src\main\AndroidManifest.xml:35:77-113
+76-->C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\android\app\src\main\AndroidManifest.xml:35:77-113
 77
 78        <receiver android:name="com.capacitorjs.plugins.localnotifications.TimedNotificationPublisher" />
-78-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:9-106
-78-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:19-103
+78-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:9-106
+78-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:19-103
 79        <receiver android:name="com.capacitorjs.plugins.localnotifications.NotificationDismissReceiver" />
-79-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-107
-79-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:19-104
+79-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-107
+79-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:19-104
 80        <receiver
-80-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:9-23:20
+80-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:9-23:20
 81            android:name="com.capacitorjs.plugins.localnotifications.LocalNotificationRestoreReceiver"
-81-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:13-103
+81-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:13-103
 82            android:directBootAware="true"
-82-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:16:13-43
+82-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:16:13-43
 83            android:exported="false" >
-83-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:17:13-37
+83-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:17:13-37
 84            <intent-filter>
-84-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:13-22:29
+84-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:13-22:29
 85                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-85-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:17-86
-85-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:25-83
+85-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:17-86
+85-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:25-83
 86                <action android:name="android.intent.action.BOOT_COMPLETED" />
-86-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:17-79
-86-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:25-76
+86-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:17-79
+86-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:25-76
 87                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-87-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:17-82
-87-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:25-79
+87-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:17-82
+87-->[:capacitor-local-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:25-79
 88            </intent-filter>
 89        </receiver>
 90
 91        <service
-91-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-14:19
+91-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:9-14:19
 92            android:name="com.capacitorjs.plugins.pushnotifications.MessagingService"
-92-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-86
+92-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:13-86
 93            android:exported="false" >
-93-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:13-37
+93-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:13-37
 94            <intent-filter>
-94-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:13-13:29
+94-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:13-13:29
 95                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-95-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:17-78
-95-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:25-75
+95-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:17-78
+95-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:25-75
 96            </intent-filter>
 97        </service>
 98        <service
@@ -468,10 +468,10 @@
 252            android:exported="false" >
 252-->[com.google.firebase:firebase-messaging:24.1.0] C:\Users\feder\.gradle\caches\8.9\transforms\6586784d5469ed6e69d3fa3306dc458c\transformed\firebase-messaging-24.1.0\AndroidManifest.xml:49:13-37
 253            <intent-filter android:priority="-500" >
-253-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:13-13:29
+253-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:13-13:29
 254                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-254-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:17-78
-254-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:25-75
+254-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:17-78
+254-->[:capacitor-push-notifications] C:\Users\feder\Desktop\Ionic\Appostu-1 - capacitor7 24-02\node_modules\@capacitor\push-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:25-75
 255            </intent-filter>
 256        </service>
 257
