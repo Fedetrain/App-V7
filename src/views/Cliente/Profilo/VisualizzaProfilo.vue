@@ -153,6 +153,7 @@
   </ion-page>
 </template>
 
+
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useStore } from 'vuex';
@@ -162,7 +163,9 @@ import {
 } from 'firebase/firestore';
 import { 
   getAuth, updateEmail as updateFirebaseEmail, 
-  updatePassword as updateFirebasePassword 
+  updatePassword as updateFirebasePassword,
+  EmailAuthProvider,
+  reauthenticateWithCredential 
 } from 'firebase/auth';
 import { 
   IonPage, IonHeader, IonToolbar, IonTitle, IonContent, 
@@ -192,7 +195,13 @@ const provincia = ref('');
 const citta = ref('');
 const via = ref('');
 const numeroCivico = ref('');
+const userRole = ref('');
 
+
+const hasAuthProvider = (providerId) => {
+  const user = auth.currentUser;
+  return user?.providerData?.some(provider => provider.providerId === providerId);
+};
 // Funzioni di supporto
 const showToast = async (message, color = 'medium') => {
   const toast = await toastController.create({
@@ -205,39 +214,101 @@ const showToast = async (message, color = 'medium') => {
   await toast.present();
 };
 
+const validateEmail = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
 // Operazioni di modifica
 const modificaEmail = async () => {
   try {
-    const nuovaEmail = prompt('Inserisci la nuova email:');
-    if (!nuovaEmail) return;
+    
+    if(hasAuthProvider('google.com')) {
+      showToast('Gli utenti che accedono con Google non possono modificare l\'email', 'warning');
+      return;
+    }
+
+    const nuovaEmail = prompt('Inserisci la nuova email:');    if (!nuovaEmail) return;
+
+    if (!validateEmail(nuovaEmail)) {
+      showToast('Formato email non valido', 'danger');
+      return;
+    }
 
     const user = auth.currentUser;
+    if (!user) {
+      showToast('Utente non autenticato', 'danger');
+      return;
+    }
+
+    const currentPassword = prompt('Conferma la tua password corrente:');
+    if (!currentPassword) return;
+
+    const credential = EmailAuthProvider.credential(user.email, currentPassword);
+    await reauthenticateWithCredential(user, credential);
+
     await updateFirebaseEmail(user, nuovaEmail);
-    
+
     const uid = user.uid;
-    await Promise.all([
-      updateDoc(doc(db, 'Cliente', uid), { email: nuovaEmail }),
-      updateDoc(doc(db, 'Gestore', uid), { email: nuovaEmail })
-    ]);
+    if (userRole.value === 'Cliente') {
+      await updateDoc(doc(db, 'Cliente', uid), { email: nuovaEmail });
+    } else if (userRole.value === 'Gestore') {
+      await updateDoc(doc(db, 'Gestore', uid), { email: nuovaEmail });
+    } else {
+      throw new Error('Tipologia utente non riconosciuta');
+    }
 
     email.value = nuovaEmail;
     showToast('Email aggiornata con successo!', 'success');
   } catch (error) {
     console.error('Errore modifica email:', error);
-    showToast(`Errore: ${error.message}`, 'danger');
+    let message = 'Errore durante l\'aggiornamento dell\'email';
+    if (error.code === 'auth/email-already-in-use') {
+      message = 'Email già utilizzata da un altro account';
+    } else if (error.code === 'auth/requires-recent-login') {
+      message = 'Riautenticazione richiesta. Effettua il login nuovamente.';
+    }
+    showToast(`${message} (${error.code})`, 'danger');
   }
 };
 
 const modificaPassword = async () => {
   try {
-    const nuovaPassword = prompt('Inserisci la nuova password:');
+
+    if(hasAuthProvider('google.com')) {
+      showToast('Gli utenti Google devono modificare la password dal loro account Google', 'warning');
+      return;
+    }
+    const nuovaPassword = prompt('Inserisci la nuova password (min. 6 caratteri):');
     if (!nuovaPassword) return;
 
-    await updateFirebasePassword(auth.currentUser, nuovaPassword);
+    if (nuovaPassword.length < 6) {
+      showToast('La password deve contenere almeno 6 caratteri', 'danger');
+      return;
+    }
+
+    const user = auth.currentUser;
+    if (!user) {
+      showToast('Utente non autenticato', 'danger');
+      return;
+    }
+
+    const currentPassword = prompt('Conferma la tua password corrente:');
+    if (!currentPassword) return;
+
+    const credential = EmailAuthProvider.credential(user.email, currentPassword);
+    await reauthenticateWithCredential(user, credential);
+
+    await updateFirebasePassword(user, nuovaPassword);
     showToast('Password aggiornata con successo!', 'success');
   } catch (error) {
     console.error('Errore modifica password:', error);
-    showToast(`Errore: ${error.message}`, 'danger');
+    let message = 'Errore durante l\'aggiornamento della password';
+    if (error.code === 'auth/weak-password') {
+      message = 'Password troppo debole (min. 6 caratteri)';
+    } else if (error.code === 'auth/requires-recent-login') {
+      message = 'Riautenticazione richiesta. Effettua il login nuovamente.';
+    }
+    showToast(`${message} (${error.code})`, 'danger');
   }
 };
 
@@ -249,14 +320,20 @@ const caricaDatiUtente = async (userUid) => {
       getDoc(doc(db, 'Gestore', userUid))
     ]);
 
-    const userData = clienteDoc.exists() ? clienteDoc.data() : gestoreDoc.data();
-    
+    let userData = null;
+    if (clienteDoc.exists()) {
+      userRole.value = 'Cliente';
+      userData = clienteDoc.data();
+    } else if (gestoreDoc.exists()) {
+      userRole.value = 'Gestore';
+      userData = gestoreDoc.data();
+    }
+
     if (!userData) {
       showToast('Profilo non trovato', 'warning');
       return false;
     }
 
-    // Popola i dati
     nome.value = userData.nome || '';
     cognome.value = userData.cognome || '';
     email.value = userData.email || '';
@@ -299,7 +376,6 @@ onMounted(async () => {
 }
 
 .profile-section {
-  background: var(--ion-color-light);
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 24px;
@@ -309,7 +385,6 @@ onMounted(async () => {
 .section-title {
   display: flex;
   align-items: center;
-  color: var(--ion-color-dark);
   font-size: 1.4rem;
   margin: 0 0 1.5rem 0;
 }
@@ -317,7 +392,6 @@ onMounted(async () => {
 .section-icon {
   margin-right: 12px;
   font-size: 1.8rem;
-  color: var(--ion-color-primary);
 }
 
 .form-grid {
@@ -327,11 +401,9 @@ onMounted(async () => {
 }
 
 .input-field {
-  background: white;
   border-radius: 8px;
   --padding-start: 12px;
   --padding-end: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .security-section {
@@ -350,33 +422,19 @@ onMounted(async () => {
   --padding-top: 18px;
   --padding-bottom: 18px;
   font-weight: 500;
-  transition: transform 0.2s ease;
 }
 
-.action-button:active {
-  transform: scale(0.98);
-}
 
 .custom-loading {
-  --spinner-color: var(--ion-color-primary);
   --background: rgba(255, 255, 255, 0.95);
   --backdrop-opacity: 0.8;
 }
 
 .custom-toast {
-  --background: var(--ion-color-dark);
   --color: white;
   --border-radius: 12px;
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 768px) {
-  .profile-container {
-    padding: 0 20px;
-  }
-  
-  .button-group {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 </style>

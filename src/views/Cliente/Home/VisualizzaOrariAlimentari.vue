@@ -274,8 +274,11 @@ const selectedPhoto = ref('');
 const showExtraInfo = ref(false);
 const isZoomed = ref(false);
 const ferieDates = ref([]);
-const minDate = new Date().toISOString();
-const maxDate = new Date(Date.now() + 12096e5).toISOString(); // 2 settimane
+
+const now = new Date();
+const nowItaly = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Rome" }));
+const minDate = new Date(nowItaly.getTime() + 10 * 60 * 1000).toISOString();
+const maxDate = new Date(new Date(minDate).getTime() + 7 * 24 * 60 * 60 * 1000).toISOString
 
 const consegnaACasa = ref(false);
 const addressError = ref(false);    
@@ -450,7 +453,7 @@ const validateForm = () => {
     showErrorToast('Aggiungi almeno un articolo all\'ordine');
     return false;
   }
-  if(consegnaACasa.value && (!extraInfo.value.indirizzo.trim() || !extraInfo.value.civico.trim())) {
+  if(consegnaACasa.value && (!extraInfo.value.indirizzo.trim())) {
     showErrorToast('Inserisci l\'indirizzo completo per la consegna');
     addressError.value = true;
     return false;

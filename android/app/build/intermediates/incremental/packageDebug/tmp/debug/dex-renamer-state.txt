@@ -1,20 +1,20 @@
-#Mon Feb 24 21:02:35 CET 2025
-base.0=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\10\\classes.dex
-base.10=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\7\\classes.dex
-base.11=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\8\\classes.dex
-base.12=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\9\\classes.dex
-base.13=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.14=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.15=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.2=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\11\\classes.dex
-base.3=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\12\\classes.dex
-base.4=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\13\\classes.dex
-base.5=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\14\\classes.dex
-base.6=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\15\\classes.dex
-base.7=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\2\\classes.dex
-base.8=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\4\\classes.dex
-base.9=C\:\\Users\\feder\\Desktop\\Ionic\\Appostu-1 - capacitor7 24-02\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\5\\classes.dex
+#Tue Feb 25 15:53:18 CET 2025
+base.0=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/10/classes.dex
+base.10=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/7/classes.dex
+base.11=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/8/classes.dex
+base.12=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/9/classes.dex
+base.13=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.14=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+base.15=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.2=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/11/classes.dex
+base.3=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/12/classes.dex
+base.4=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/13/classes.dex
+base.5=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/14/classes.dex
+base.6=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/15/classes.dex
+base.7=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/2/classes.dex
+base.8=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/4/classes.dex
+base.9=/Users/angeloparla/Desktop/ionic/App-V7/android/app/build/intermediates/dex/debug/mergeLibDexDebug/5/classes.dex
 path.0=classes.dex
 path.1=10/classes.dex
 path.10=7/classes.dex

@@ -1,8 +1,8 @@
 <template>
   <ion-page>
-    <ion-header class="auth-header">
+    <ion-header>
       <ion-toolbar color="primary">
-        <ion-title class="header-title">Benvenuto</ion-title>
+        <ion-title >Benvenuto</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -168,7 +168,6 @@ const signInWithGoogle = async () => {
       throw new Error("Dati utente non validi.");
     }
 
-    console.log("Accesso riuscito con Google:", result);
 
     // Ottieni le credenziali di Google
     const credential = GoogleAuthProvider.credential(result.credential.idToken);
@@ -177,7 +176,6 @@ const signInWithGoogle = async () => {
     const auth = getAuth();
     await signInWithCredential(auth, credential);
 
-    console.log("Utente autenticato con Firebase:", auth.currentUser);
 
     // Ora `onAuthStateChanged` dovrebbe essere attivato correttamente
 
@@ -273,7 +271,7 @@ const presentAlertEmailDiVerifica = async () => {
         text: 'Invia',
         handler: async () => {
           try {
-            await sendEmailVerification(auth.currentUser);
+            await sendEmailVerification(auth,auth.currentUser.email);
             await presentToast('Email di verifica inviata', 'success');
           } catch (error) {
             console.error('Resend error:', error);
@@ -388,29 +386,22 @@ auth.onAuthStateChanged(async (user) => {
       return;
     }
 
-    console.log("✅ Utente autenticato:", user);
 
     if (user.email === getAdminEmail()) {
-      console.log("👑 Utente admin rilevato. Reindirizzamento a /admin...");
       await router.replace('/admin');
       return;
     }
 
     if (!user.emailVerified) {
-      console.log("📩 Email non verificata. Mostro avviso di verifica...");
       await presentAlertEmailDiVerifica();
       return;
     }
 
-    console.log("🔍 Controllo se il documento utente esiste:", user.uid);
     await checkIfDocumentExists(user.uid);
-    console.log("✅ Documento utente trovato o creato con successo.");
   } catch (error) {
-    console.error("❌ Errore nello stato di autenticazione:", error);
     await presentToast("Errore di autenticazione", "danger");
   } finally {
     isOpenLoading.value = false;
-    console.log("🔽 Caricamento completato.");
     // SplashScreen.hide();
   }
 });

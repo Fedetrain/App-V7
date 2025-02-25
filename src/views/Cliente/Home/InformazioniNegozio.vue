@@ -522,15 +522,4 @@ onMounted(async () => {
   margin-top: 16px;
 }
 
-@media (min-width: 768px) {
-  .main-content {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .service-selector {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
 </style>

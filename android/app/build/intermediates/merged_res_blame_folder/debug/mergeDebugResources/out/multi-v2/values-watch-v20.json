@@ -4,7 +4,7 @@
             "outputFile": "app.federico.traina.app-mergeDebugResources-44:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\feder\\.gradle\\caches\\8.9\\transforms\\3283aa489106f2712954524f6c417643\\transformed\\play-services-auth-21.2.0\\res\\values-watch-v20\\values.xml",
+                    "source": "/Users/angeloparla/.gradle/caches/8.9/transforms/3283aa489106f2712954524f6c417643/transformed/play-services-auth-21.2.0/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\feder\\.gradle\\caches\\8.9\\transforms\\d3190341edad1712f61562c503e7b95e\\transformed\\core-splashscreen-1.0.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "/Users/angeloparla/.gradle/caches/8.9/transforms/d3190341edad1712f61562c503e7b95e/transformed/core-splashscreen-1.0.1/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\feder\\.gradle\\caches\\8.9\\transforms\\1133e0e8251d64dcc38b4a8b969e16d6\\transformed\\appcompat-1.7.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "/Users/angeloparla/.gradle/caches/8.9/transforms/1133e0e8251d64dcc38b4a8b969e16d6/transformed/appcompat-1.7.0/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

@@ -4,7 +4,7 @@
             "outputFile": "app.federico.traina.app-mergeDebugResources-44:/values-v27/values-v27.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\feder\\.gradle\\caches\\8.9\\transforms\\d3190341edad1712f61562c503e7b95e\\transformed\\core-splashscreen-1.0.1\\res\\values-v27\\values-v27.xml",
+                    "source": "/Users/angeloparla/.gradle/caches/8.9/transforms/d3190341edad1712f61562c503e7b95e/transformed/core-splashscreen-1.0.1/res/values-v27/values-v27.xml",
                     "from": {
                         "startLines": "2,3,4,7",
                         "startColumns": "4,4,4,4",

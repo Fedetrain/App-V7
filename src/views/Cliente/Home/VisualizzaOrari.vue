@@ -513,11 +513,18 @@ function aggiungiOrarioSeNonPresente(orarioPerGiorno,setDefinitivo) {
     });
   }
 }
+// Helper: converte una stringa "HH:mm" in minuti dall'inizio della giornata
+function timeToMinutes2(time) {
+  const [hours, minutes] = time.split(':').map(Number);
+  return hours * 60 + minutes;
+}
 
 function trovaOrariNonPrenotatiConsecutivi(durata, setDefinitivo) {
+  console.log("Inizio ricerca orari non prenotati consecutivi...");
+  console.log("Durata servizio:", durata);
+  console.log("Set di orari ricevuto:", setDefinitivo);
 
-
-  const orariArray = Array.from(setDefinitivo);  // Converte il set a un array
+  const orariArray = Array.from(setDefinitivo); // Converte il set in un array
   const orariNonPrenotatiConsecutivi = new Set();
   let consecutiviNonPrenotati = [];
 
@@ -528,47 +535,69 @@ function trovaOrariNonPrenotatiConsecutivi(durata, setDefinitivo) {
       if (consecutiviNonPrenotati.length >= durata / 15) {
         consecutiviNonPrenotati.forEach(ora => orariNonPrenotatiConsecutivi.add(ora));
       }
+      console.log("Blocco di orari non prenotati trovato:", consecutiviNonPrenotati);
       consecutiviNonPrenotati = [];
     }
   }
 
+  // Controlla l'ultimo blocco, se presente
   if (consecutiviNonPrenotati.length >= durata / 15) {
     consecutiviNonPrenotati.forEach(ora => orariNonPrenotatiConsecutivi.add(ora));
-    console.log("Orari aggiunti al set finale:", consecutiviNonPrenotati);
+    console.log("Orari finali aggiunti al set:", consecutiviNonPrenotati);
   }
 
-  console.log("Orari non prenotati consecutivi per la durata del servizio scelto:", orariNonPrenotatiConsecutivi);
-  console.log("Fine ricerca orari non prenotati consecutivi");
+  console.log("Orari non prenotati consecutivi prima della rimozione:", orariNonPrenotatiConsecutivi);
 
+  // Rimuove gli orari che, pur essendo in blocchi consecutivi, porterebbero ad un termine del servizio oltre la fine del blocco
   rimuoviUltimiOrari(orariNonPrenotatiConsecutivi, durata);
-  rimuoviUltimiOrar(orariNonPrenotatiConsecutivi, orariArray,durata);
+  // Rimuove orari troppo vicini a una prenotazione successiva
+  rimuoviUltimiOrar(orariNonPrenotatiConsecutivi, orariArray, durata);
 
   console.log("Orari non prenotati consecutivi dopo rimozione ultimi orari:", orariNonPrenotatiConsecutivi);
+  console.log("Fine ricerca orari non prenotati consecutivi");
 
   return orariNonPrenotatiConsecutivi;
 }
 
 function rimuoviUltimiOrari(orariNonPrenotatiConsecutivi, durataServizioSelezionato) {
+  console.log("Inizio rimozione ultimi orari per ogni blocco...");
+  console.log("Orari iniziali:", orariNonPrenotatiConsecutivi);
+
+  // Converte il set in un array (presumibilmente ordinato)
   const arraySet = Array.from(orariNonPrenotatiConsecutivi);
-  const x = durataServizioSelezionato / 15;
   
+  // Divide l'array in blocchi consecutivi; assicurati che splitIntoBlocks funzioni correttamente
   const blocks = splitIntoBlocks(arraySet);
-  const trimmedBlocks = [];
-  
+  const trimmedSlots = [];
+  console.log("Blocchi trovati:", blocks);
+
   blocks.forEach(block => {
-    if (block.length >= x) {
-      const trimmedBlock = block.slice(0, block.length - x);
-      trimmedBlocks.push(...trimmedBlock);
+    if (block.length > 0) {
+      // Definisce la fine del blocco come l'ultimo orario + 15 minuti
+      const blockEnd = timeToMinutes2(block[block.length - 1]) + 15;
+      console.log("Blocco:", block, "Block end (minuti):", blockEnd);
+      
+      // Filtra gli orari del blocco: l'orario di inizio + durata non deve superare blockEnd
+      const validSlots = block.filter(slot => {
+        const slotStart = timeToMinutes2(slot);
+        return (slotStart + durataServizioSelezionato) <= blockEnd;
+      });
+      trimmedSlots.push(...validSlots);
+      console.log("Blocco:", block, "validSlots:", validSlots);
+    } else {
+      console.log("Blocco troppo corto, ignorato:", block);
     }
   });
-  
+
   orariNonPrenotatiConsecutivi.clear();
-  trimmedBlocks.forEach(elemento => orariNonPrenotatiConsecutivi.add(elemento));
-  
-  console.log("Ultimi orari rimossi da ogni blocco:", x);
+  trimmedSlots.forEach(slot => orariNonPrenotatiConsecutivi.add(slot));
+  console.log("Orari dopo rimozione ultimi orari:", orariNonPrenotatiConsecutivi);
 }
 
 function rimuoviUltimiOrar(orariNonPrenotatiConsecutivi, orariArray, durata) {
+  console.log("Inizio rimozione orari per prenotazioni vicine...");
+  console.log("Orari iniziali:", orariNonPrenotatiConsecutivi);
+
   const arraySet = Array.from(orariNonPrenotatiConsecutivi);
   const durataInOrari = durata / 15;
 
@@ -582,15 +611,21 @@ function rimuoviUltimiOrar(orariNonPrenotatiConsecutivi, orariArray, durata) {
 
       if (orarioSuccessivoPrenotato) {
         const differenzaTempo = orariArray.indexOf(orarioSuccessivoPrenotato) - indiceOrarioCorrente;
+        console.log(`Orario corrente: ${orarioCorrente}, Differenza tempo: ${differenzaTempo}`);
 
         if (differenzaTempo < durataInOrari) {
-          // Rimuovi l'orario non prenotato consecutivo
+          console.log(`Rimosso orario ${orarioCorrente} perché troppo vicino a una prenotazione.`);
           orariNonPrenotatiConsecutivi.delete(orarioCorrente);
         }
       }
     }
   }
+
+  console.log("Orari dopo la rimozione:", orariNonPrenotatiConsecutivi);
 }
+
+
+
 
 
 
@@ -842,18 +877,14 @@ async function recuperaNomeCliente(){
   align-items: center;
   padding: 0.8rem;
   border-radius: 12px;
-  background: var(--ion-color-light);
   transition: all 0.2s ease;
   border: 1px solid var(--ion-color-light-shade);
   cursor: pointer;
 }
 
 .day-item.selected-day {
-  background: var(--ion-color-secondary);
-  color: var(--ion-color-secondary-contrast);
-  border-color: var(--ion-color-secondary-shade);
+  background-color: rgba(255, 166, 0, 0.455);
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(var(--ion-color-secondary-rgb), 0.2);
 }
 
 .weekday-name {
@@ -871,17 +902,13 @@ async function recuperaNomeCliente(){
 
 /* Time Slots */
 .time-slot-card {
-  background: var(--ion-color-light);
   border-radius: 14px;
   padding: 1.2rem;
   transition: all 0.25s ease;
-  border: 1px solid var(--ion-color-light-shade);
+  border: 1px solid orange
 }
 
-.time-slot-card.active-slot {
-  border-color: var(--ion-color-primary-shade);
-  box-shadow: 0 4px 16px rgba(var(--ion-color-primary-rgb), 0.15);
-}
+
 
 .time-display {
   display: flex;

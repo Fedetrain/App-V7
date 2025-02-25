@@ -29,10 +29,13 @@
         <ion-button v-if="categoriaNegozio=='Servizi di estetica e bellezza'" class="custom-button" fill="outline" @click="inserisciServizi()">Modifica servizi</ion-button>
         <ion-button v-if="categoriaNegozio=='Servizi di estetica e bellezza' "class="custom-button" fill="outline" @click="modificaOrariLavorativi()">Modifica orari lavorativi</ion-button>
         <ion-button class="custom-button" fill="outline" @click="InserisciFerie()">Inserisci ferie</ion-button>
+        <ion-button v-if="categoriaNegozio=='Alimentari e cibo'" class="custom-button" fill="outline" @click="openGiorniChiusuraModal()">Inserisci Giorno di chiusura</ion-button>
+
         <!-- Pulsante per la gestione foto menu (visibile solo se categoriaNegozio è Alimentari) -->
         <ion-button v-if="categoriaNegozio=='Alimentari e cibo'" class="custom-button" fill="outline" @click="apriModaleMenu()">
           Carica Foto Menu
         </ion-button>
+
       </div>
     </ion-content>
 
@@ -108,6 +111,36 @@
         </div>
       </ion-content>
     </ion-modal>
+
+
+
+
+
+    <ion-modal :is-open="showGiorniChiusuraModal">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Seleziona giorni di chiusura</ion-title>
+        <ion-buttons slot="end">
+          <ion-button @click="closeGiorniChiusuraModal">Chiudi</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Per ogni giorno della settimana mostra un item con checkbox -->
+         <p>ATTENZIONE:Ricorda che i giorni di chiusura si applicano ad ogni settimana
+         </p>
+        <ion-item v-for="day in giorniSettimana" :key="day">
+          <ion-label>{{ day }}</ion-label>
+          <ion-checkbox         :checked="giorniChiusura.includes(day)" 
+          @ionChange="toggleDaySelection(day)">></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="full" @click="salvaGiorniChiusura">
+        Salva
+      </ion-button>
+    </ion-content>
+  </ion-modal>
   </ion-page>
 </template>
 
@@ -115,6 +148,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import {
+  IonCheckbox,
   IonLoading,
   IonProgressBar,
   IonPage,
@@ -130,6 +164,7 @@ import {
   IonTextarea,
   IonButtons,
   IonIcon,
+  IonList,
   toastController
 } from '@ionic/vue';
 import { add } from 'ionicons/icons';
@@ -176,6 +211,10 @@ const mostraProgresBar = ref(true);
 var idDocumentNegozio = ref('');
 
 const mostraModaleModifica = ref(false); // Per il modale di modifica informazioni
+const showGiorniChiusuraModal = ref(false);
+const giorniSettimana = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
+const selectedDays = ref([]);
+
 
 // Variabili per modificare i dati
 const nomeNegozioModifica = ref('');
@@ -192,6 +231,19 @@ const menuPhotos = ref([]);
 // Icona da usare per il pulsante "+"
 const addIcon = ref(add);
 
+const giorniChiusura=ref([])
+
+
+const toggleDaySelection = (day) => {
+  const index = giorniChiusura.value.indexOf(day);
+  if (index === -1) {
+    console.log('aggiungo',day)
+    giorniChiusura.value.push(day); // Aggiungi se non esiste
+  } else {
+    giorniChiusura.value.splice(index, 1); // Rimuovi se esiste
+    console.log('rimuovo')
+  }
+};
  // Apri il modale di modifica informazioni
 const apriModaleModifica = () => {
   mostraModaleModifica.value = true;
@@ -208,6 +260,30 @@ const chiudiModaleModifica = () => {
   testoBottone.value = "Clicca per caricare una nuova foto";
   mostraModaleModifica.value = false;
 };
+
+function openGiorniChiusuraModal() {
+  showGiorniChiusuraModal.value = true;
+}
+
+// Funzione per chiudere il modal
+function closeGiorniChiusuraModal() {
+  showGiorniChiusuraModal.value = false;
+}
+
+// Funzione per salvare i giorni di chiusura nel documento Firestore
+async function salvaGiorniChiusura() {
+  try {
+    // Aggiorna il documento con merge, aggiungendo/aggiornando il campo "giorniChiusura"
+    const negozioDocRef = doc(db, "Negozi", idDocumentNegozio.value);
+    await setDoc(negozioDocRef, { giorniChiusura: giorniChiusura.value }, { merge: true });
+    console.log("Giorni di chiusura aggiornati con successo:", selectedDays.value);
+    // Chiude il modal e resetta la selezione (se desiderato)
+    closeGiorniChiusuraModal();
+    selectedDays.value = [];
+  } catch (error) {
+    console.error("Errore durante l'aggiornamento dei giorni di chiusura:", error);
+  }
+}
 
 const presentToast = async (message, color = 'medium') => {
   const toast = await toastController.create({
@@ -268,13 +344,18 @@ const salvaModifiche = async () => {
     };
 
     // Aggiorna immagine se presente
-    if (nuovaImmagine.value) {
-      const storageRef = storageReference(storage, `/images/${docRef.id}`);
-      const blob = await uriToBlob(photo.webPath);
-      await uploadBytes(storageRef, blob).then((snapshot) => {
-      });
-      nuovoImmagineURL = await getDownloadURL(storageRef);
-    }
+    if (nuovaImmagine) {
+    // Aggiungi l'estensione .jpg al percorso
+    const storageRef = storageReference(storage, `/images/${idDocumentNegozio.value}`);
+    
+    // Specifica il content type nell'upload
+    const blob = await uriToBlob(nuovaImmagine);
+    await uploadBytes(storageRef, blob, {
+      contentType: 'image/jpeg'
+    });
+
+    nuovoImmagineURL = await getDownloadURL(storageRef);
+  }
 
     await setDoc(docRef, aggiornamenti, { merge: true });
 
@@ -284,15 +365,17 @@ const salvaModifiche = async () => {
     cittaNegozio.value = cittaNegozioModifica.value;
     numeroCellulare.value = numeroCellulareModifica.value;
     descrizioneNegozio.value = descrizioneNegozioModifica.value;
-    if (nuovaImmagine) {
+    if (nuovoImmagineURL) {
       immagineNegozio.value = nuovoImmagineURL;
     }
 
     chiudiModaleModifica();
     console.log('Modifiche salvate con successo.');
+    presentToast('Modifiche salvate con successo ', 'danger');
+
   } catch (error) {
     presentToast('Errore ', 'danger');
-
+    isOpenLoading.value = false;
     console.error('Errore durante il salvataggio delle modifiche:', error);
   } finally {
     isOpenLoading.value = false;
@@ -337,6 +420,8 @@ async function caricaDatiDaFirestore() {
       const immagineRef = storageReference(storage, `images/${idDocumentNegozio.value}`);
       immagineNegozio.value = await getDownloadURL(immagineRef);
       mostraProgresBar.value = false;
+
+      giorniChiusura.value=docSnap.data().giorniChiusura || []
     } else {
       router.push('/registrazione/registrazioneClienteGestore/registrazioneNegozio'); // Naviga al secondo componente
     }
@@ -568,9 +653,7 @@ ion-textarea {
   border-radius: 6px;
   padding: 10px;
   font-weight: bold;
-  background: var(--ion-color-light);
   text-align: center;
-  transition: background-color 0.3s, transform 0.2s;
 }
 
 .upload-btn:hover {
@@ -581,18 +664,9 @@ ion-textarea {
 /* Pulsante per salvare le modifiche */
 .save-btn {
   margin-top: 16px;
-  font-size: 1rem;
-  padding: 12px;
   border-radius: 6px;
-  background-color: var(--ion-color-primary);
-  color: #ffffff;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.save-btn:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
-}
 
 /* Sezione foto menu */
 .menu-photos-container {

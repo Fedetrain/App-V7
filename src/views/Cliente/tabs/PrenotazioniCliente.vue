@@ -94,17 +94,17 @@
             <div v-else class="service-details">
               <div style="display: flex; align-items: center; gap: 20px; font-size: 1.2rem;">
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <ion-icon :icon="hourglassOutline" style="font-size: 1.5rem;"></ion-icon>
+                  <ion-icon :icon="hourglassOutline" style="font-size: 1rem;"></ion-icon>
                   <span>{{ prenotazione.durataServizioSelezionato }} min</span>
                 </div>
                 
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <ion-icon :icon="playOutline" style="font-size: 1.5rem;"></ion-icon>
+                  <ion-icon :icon="playOutline" style="font-size: 1rem;"></ion-icon>
                   <span>{{ prenotazione.oraInizio }}</span>
                 </div>
                 
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <ion-icon :icon="stopOutline" style="font-size: 1.5rem;"></ion-icon>
+                  <ion-icon :icon="stopOutline" style="font-size: 1rem;"></ion-icon>
                   <span>{{ prenotazione.oraFine }}</span>
                 </div>
               </div>
@@ -311,13 +311,14 @@ const handleDelete = async (prenotazione) => {
             if (prenotazione.oraInizio) {
               const [hours, minutes] = prenotazione.oraInizio.split(':').map(Number);
               oraInizioPrenotazione.setHours(hours, minutes);
+              const diffOre = (oraInizioPrenotazione.getTime() - now.getTime()) / (1000 * 60 * 60);
+            
+              if (diffOre <= 2) {
+                return presentToast("Non è possibile eliminare la prenotazione. Meno di 2 ore all'inizio del servizio.");
+              }
             }
 
-            const diffOre = (oraInizioPrenotazione.getTime() - now.getTime()) / (1000 * 60 * 60);
             
-            if (diffOre <= 2) {
-              return presentToast("Non è possibile eliminare la prenotazione. Meno di 2 ore all'inizio del servizio.");
-            }
             
             isOpenLoading.value = true;
             await deleteDoc(doc(db, 'Prenotazioni', prenotazione.idDocumentPrenotazione));
@@ -462,8 +463,6 @@ async function presentToast(message) {
 
 .info-grid {
   display: grid;
-  gap: 0.8rem;
-  margin-bottom: 1.2rem;
 }
 
 .info-item {
@@ -486,12 +485,10 @@ async function presentToast(message) {
 
 /* Stili stato */
 .status-badge {
+  margin-top: 2%;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   width: fit-content;
 }
 
@@ -580,21 +577,16 @@ async function presentToast(message) {
 .empty-text {
   color: #7f8c8d;
   font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .order-button {
   --border-radius: 12px;
-  --padding-top: 0.8rem;
-  --padding-bottom: 0.8rem;
-  font-weight: 600;
 }
 
 .action-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.2rem;
 }
 
 .queue-info {

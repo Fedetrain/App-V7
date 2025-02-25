@@ -4,7 +4,7 @@
             "outputFile": "app.federico.traina.app-mergeDebugResources-44:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\feder\\.gradle\\caches\\8.9\\transforms\\c6438390da8a3402544aa051bb53208d\\transformed\\material-1.12.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+                    "source": "/Users/angeloparla/.gradle/caches/8.9/transforms/c6438390da8a3402544aa051bb53208d/transformed/material-1.12.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

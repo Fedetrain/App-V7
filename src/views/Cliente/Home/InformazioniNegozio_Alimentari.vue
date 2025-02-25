@@ -57,7 +57,7 @@ import { useRouter } from 'vue-router';
 import BackButton from '/src/views/Components/BackButton.vue';
 
 // Ionic e Firebase imports
-import { IonIcon, IonPopover, IonLoading, IonButton, toastController, IonButtons, IonLabel, IonModal, IonList, IonItem, IonPage, IonBackButton, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonDatetime } from '@ionic/vue';
+import { IonInput,IonIcon, IonPopover, IonLoading, IonButton, toastController, IonButtons, IonLabel, IonModal, IonList, IonItem, IonPage, IonBackButton, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonDatetime } from '@ionic/vue';
 import { callOutline } from 'ionicons/icons';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
@@ -84,9 +84,27 @@ const showToastError = async (errorMessage) => {
 };
 
 const prenotaNegozio = () => {
-  // Eventuale logica aggiuntiva per la prenotazione può essere inserita qui
+  // Ottieni la data odierna
+  const oggi = new Date();
+  // Mappa i numeri della settimana (0 = Domenica, 1 = Lunedì, …, 6 = Sabato)
+  const giorniSettimana = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+  const giornoOggi = giorniSettimana[oggi.getDay()];
+  console.log("Giorno odierno:", giornoOggi);
+
+
+  const giorniChiusura = document.value.giorniChiusura || []; // Se non esiste, restituisce un array vuoto
+  // Assumi che 'giorniChiusura' sia un array contenente i giorni di chiusura del negozio, es. ['Lunedì', 'Martedì']
+  // Questo array dovrebbe essere recuperato dal documento Firestore o dallo store.
+  console.log('giorni chiusura',giorniChiusura)
+  if (giorniChiusura.length > 0 && giorniChiusura.includes(giornoOggi)) {
+    showToastError("Il negozio è chiuso oggi", "warning");
+    return;
+  }
+
+  // Se il negozio non è chiuso, esegue la navigazione
   router.push("/cliente/tabs/tab1/informazioniNegozio/visualizzaOrari_Alimentari");
 };
+
 
 const recuperaInformazioniNegozio = async () => {
   try {
@@ -222,32 +240,6 @@ onMounted(() => {
   text-align: center;
 }
 
-/* Pulsante Prenota */
-ion-button {
-  --border-radius: 12px;
-  margin-top: 16px;
-  transition: transform 0.2s ease-in-out;
-}
-ion-button:hover {
-  transform: scale(1.02);
-}
 
-/* Media queries per la responsività */
-@media (min-width: 768px) {
-  .store-name {
-    font-size: 2.5em;
-  }
-  .store-address, .phone-number, .store-description {
-    font-size: 1.1em;
-  }
-}
 
-@media (min-width: 1024px) {
-  .store-details {
-    padding: 24px;
-  }
-  .store-name {
-    font-size: 2.5em;
-  }
-}
 </style>

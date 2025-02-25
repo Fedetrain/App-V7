@@ -88,7 +88,7 @@ import {
 } from '@ionic/vue';
 import { toastController } from '@ionic/vue';
 import { homeOutline, calendarOutline, personOutline, chatbubbleSharp } from 'ionicons/icons';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc,doc,setDoc } from 'firebase/firestore';
 import { PushNotifications } from '@capacitor/push-notifications';
 import { LocalNotifications } from '@capacitor/local-notifications';
 import { getAuth } from "firebase/auth";
@@ -107,6 +107,12 @@ const alertButtons = ref(['OK']);
 const categoriaNegozio = store.getters.getCategoriaNegozio;
 let backButtonPressedOnce = false;
 const exitAppTimeout = ref(null);
+
+// Aggiungi queste variabili reactive
+const notificationPermission = ref('default');
+const showRationale = ref(false); // Mancava l'inizializzazione
+
+
 
 const presentToast = async (message, color = 'medium') => {
   const toast = await toastController.create({
@@ -154,17 +160,45 @@ const handleAlertDismiss = () => {
   alertMessage.value = '';
 };
 
-// Implementazione aggiornata per le notifiche
-const requestNotificationPermission = async () => {
-  // Richiedi i permessi per le push notifications
-  const permissionStatus = await PushNotifications.requestPermissions();
-  if (permissionStatus.receive === 'granted') {
-    await PushNotifications.register();
-  } else {
-    showRationale.value = true;
+
+const updateNotificationToken = async (token) => {
+  try {
+    const user = getAuth().currentUser;
+    if (!user) {
+      return;
+    }
+    const userId = user.uid;
+    const userDocRef = doc(db, "Gestore", userId);
+    await setDoc(userDocRef, { notificationToken: token }, { merge: true });
+
+  } catch (error) {
+    console.error("Error updating token: ", error);
   }
+};
+
+// Funzione per richiedere i permessi delle notifiche (se necessario)
+const requestNotificationPermission = async () => {
+  try {
+    const permissionResult = await PushNotifications.requestPermissions();
+    if (permissionResult.receive === 'granted') {
+      await PushNotifications.register();
+      await setupPushNotifications();
+    } else {
+      presentToast('Permessi notifiche non concessi', 'warning');
+    }
+  } catch (error) {
+    console.error('Errore durante richiesta permessi notifiche:', error);
+  }
+};
+const setupPushNotifications = async () => {
+  // Listener per errori di registrazione
+  PushNotifications.addListener('registrationError', (error) => {
+    console.error('Errore di registrazione:', error);
+    presentToast('Errore nella registrazione delle notifiche', 'danger');
+  });
+
   
-  // Listener per la ricezione di una push notification (in primo piano)
+  // Listener per notifiche ricevute
   PushNotifications.addListener('pushNotificationReceived', (notification) => {
     const notificationId = Math.floor(Date.now() / 1000) + Math.floor(Math.random() * 1000);
     // Programma una local notification per mostrare i dettagli
@@ -180,30 +214,60 @@ const requestNotificationPermission = async () => {
       ],
     });
   });
-
-  // Listener per le azioni sulle notifiche
+  
+  // Listener per azioni sulla notifica
   PushNotifications.addListener('pushNotificationActionPerformed', (notification) => {
-  });
-
-  // Listener per la registrazione avvenuta con successo: aggiorna il token nel database
-  PushNotifications.addListener('registration', (token) => {
-    updateNotificationToken(token.value);
+    console.log('Azione notifica eseguita:', notification);
+    // Qui puoi implementare logica aggiuntiva se necessario
   });
 };
 
-const updateNotificationToken = async (token) => {
+const getPlatform = () => {
+  return App.getPlatform ? App.getPlatform() : (window.Capacitor ? window.Capacitor.getPlatform() : 'web');
+};
+
+const showPermissionSettingsAlert = async () => {
+  const alert = await alertController.create({
+    header: 'Permessi richiesti',
+    message: 'Attiva le notifiche nelle impostazioni del dispositivo',
+    buttons: [
+      {
+        text: 'Annulla',
+        role: 'cancel'
+      },
+      {
+        text: 'Apri impostazioni',
+        handler: () => {
+          const platform = getPlatform();
+          const settingsUrl = platform === 'ios' ? 'app-settings:' : 'settings:';
+          App.openUrl({ url: settingsUrl });
+        }
+      }
+    ]
+  });
+  await alert.present();
+};
+
+const checkAndHandleNotifications = async () => {
   try {
-    const user = getAuth().currentUser;
-    if (!user) {
-      return;
+    const status = await PushNotifications.checkPermissions();
+    notificationPermission.value = status.receive;
+
+    if (status.receive === 'granted') {
+      // Se i permessi sono già concessi, registra e imposta i listener
+      await PushNotifications.register();
+      await setupPushNotifications();
+    } else if (status.receive === 'prompt') {
+      showRationale.value = true;
+    } else {
+      await showPermissionSettingsAlert();
     }
-    const userId = user.uid;
-    const userDocRef = doc(db, "Gestore", userId);
-    await setDoc(userDocRef, { notificationToken: token }, { merge: true });
   } catch (error) {
-    console.error("Error updating token: ", error);
+    console.error('Error handling notifications:', error);
   }
 };
+
+
 
 onMounted(async () => {
   App.addListener('backButton', async () => {
@@ -217,28 +281,27 @@ onMounted(async () => {
       }, 2000);
     }
   });
+  await checkAndHandleNotifications();
+});
+
+
+// Aggiungi questo listener per gli aggiornamenti del token
+PushNotifications.addListener('registration', async (token) => {
   try {
-    // Verifica lo stato dei permessi per le push notifications
-    const status = await PushNotifications.checkPermissions();
-    if (status.receive === 'granted') {
-      // Se i permessi sono già concessi, esegue la registrazione e imposta i listener
-      await requestNotificationPermission();
-    } else if (status.receive === 'denied') {
-      console.warn('Notifiche disabilitate. Indirizza l’utente alle impostazioni.');
-      alert('Le notifiche sono disabilitate. Abilitarle nelle impostazioni del dispositivo.');
-      // Su Android potrebbe essere necessario aprire le impostazioni in modo specifico:
-      await App.openUrl({ url: 'app-settings:' });
-    } else {
-      showRationale.value = true;
-    }
+    await updateNotificationToken(token.value);
   } catch (error) {
-    console.error('Errore durante il controllo o la richiesta di permessi:', error);
+    console.error('Token update failed:', error);
+    presentToast('Errore sincronizzazione notifiche', 'danger');
   }
 });
 
+// Aggiungi cleanup listeners
 onUnmounted(() => {
-  App.removeAllListeners();
+  PushNotifications.removeAllListeners();
+  LocalNotifications.removeAllListeners();
 });
+
+
 
 const handleBackButton = async () => {
   if (mostraPopover.value) {

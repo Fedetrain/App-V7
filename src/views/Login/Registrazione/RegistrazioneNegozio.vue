@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary"  >
-        <ion-title class="ion-text-center">Registra il tuo negozio</ion-title>
+        <ion-title >Registra il tuo negozio</ion-title>
         <ion-loading :is-open="isOpenLoading" message="Please wait..." class="loading-spinner"></ion-loading>
         <BackButton></BackButton>
 
@@ -83,6 +83,7 @@
 .registration-form {
   max-width: 400px;
   margin: auto;
+  margin-bottom: 1000px;
 }
 
 .form-item {
@@ -374,7 +375,7 @@ message: '🔹 **IMPORTANTE** 🔹\n\n' +
          '   Premi sul link presente nell\'email per confermare il tuo account.\n' +
          '   **Non potrai effettuare il login finché non completi la verifica.**\n\n' +
          '2️⃣ **Attendi la conferma della registrazione:**\n' +
-         '   L\'accesso sarà possibile solo dopo l\'approvazione della registrazione.\n' +
+         '   L\'accesso sarà possibile solo dopo l\'approvazione della registrazione da parte dell assistenza.\n' +
          '   **Prova ad accedere di tanto in tanto per verificare lo stato.**',
 
     buttons: [

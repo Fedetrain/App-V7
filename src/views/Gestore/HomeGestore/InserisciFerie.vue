@@ -8,7 +8,7 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content class="ion-padding content-background">
+    <ion-content class="ion-padding">
       <div class="div">
         <ion-item class="date-item">
           <ion-label position="stacked">Seleziona la data di ferie</ion-label>
@@ -44,8 +44,6 @@
     </ion-content>
   </ion-page>
 </template>
-
-
 
 <script setup>
 import { ref, onMounted } from 'vue';
@@ -95,6 +93,8 @@ const formatDate = (dateString) => {
 
 // Funzione per rimuovere le prenotazioni per una data
 const removeReservationsByDate = async (dataSelezionata) => {
+  isOpenLoading.value = true;
+
   const storeId = store.getters.getIdDocumentNegozioGestore;
   if (!storeId) {
     message.value = 'Store ID non trovato.';
@@ -140,7 +140,10 @@ const removeReservationsByDate = async (dataSelezionata) => {
 
 
     message.value = 'Prenotazioni rimosse con successo per la data selezionata.';
+    isOpenLoading.value = false;
+
   } catch (error) {
+    isOpenLoading.value = false;
     message.value = 'Si è verificato un errore. Riprova.';
   }
 };
@@ -151,11 +154,14 @@ const saveVacation = async () => {
 
   if (!selectedDate.value) {
     message.value = 'Per favore, seleziona una data.';
+    isOpenLoading.value = false;
+
     return;
   }
 
   const storeId = store.getters.getIdDocumentNegozioGestore;
   if (!storeId) {
+    isOpenLoading.value = false;
     message.value = 'Store ID non trovato.';
     return;
   }
@@ -188,6 +194,8 @@ const saveVacation = async () => {
     await removeReservationsByDate(dataSelezionata);
     await fetchVacationDays(); // Ricarica la lista dei giorni di ferie
   } catch (error) {
+    isOpenLoading.value = false;
+
     console.error("Errore nel salvataggio delle ferie: ", error);
     message.value = 'Si è verificato un errore. Riprova.';
   } finally {
@@ -210,6 +218,8 @@ const fetchVacationDays = async () => {
         date: data.date || 'Data non disponibile' // Gestione del caso senza 'date'
       };
     });
+    isOpenLoading.value = false;
+
   } catch (error) {
     isOpenLoading.value = false;
   } finally {
@@ -227,6 +237,8 @@ const deleteVacation = async (id) => {
     message.value = 'Ferie eliminate con successo!';
     await fetchVacationDays(); // Ricarica la lista dei giorni di ferie
   } catch (error) {
+    isOpenLoading.value = false;
+
     console.error("Errore nella cancellazione delle ferie: ", error);
     message.value = 'Si è verificato un errore. Riprova.';
   } finally {
@@ -235,7 +247,10 @@ const deleteVacation = async (id) => {
 };
 
 // Fetch dei giorni di ferie quando il componente viene montato
-onMounted(fetchVacationDays);
+onMounted(async () => {
+  await fetchVacationDays()
+  isOpenLoading.value = false;
+});
 </script>
 
 
@@ -255,6 +270,7 @@ onMounted(fetchVacationDays);
 
 .date-picker {
   --border-radius: 8px;
+  background-color: #e27108a8;
 }
 
 

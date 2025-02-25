@@ -117,7 +117,7 @@
 <style scoped>
 
 .form-container{
-  margin-bottom: 200px;
+  margin-bottom: 1000px;
 }
 
 
@@ -295,7 +295,22 @@ const registerUser = async () => {
     }else if (sceltaUtente=='Cliente') {
       await registraUtenteNelDb();
       isOpenLoading.value = false;
+      presentToast()
       router.replace('/login'); // Naviga al secondo componente
+      const alert = await alertController.create({
+    header: 'Registrazione completata, accedi di nuovo per cominciare ad usare Appò',
+    message: '',
+    buttons: [
+      {
+        text: 'OK',
+        handler: () => {
+          // La logica qui sarà eseguita quando l'utente preme OK
+          console.log('Azione eseguita dopo aver premuto OK');
+        }
+      }
+    ]
+  });
+  await alert.present();
 
 
     }

@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-header class="sticky-header">
+    <ion-header>
       <ion-toolbar color="primary">
         <ion-segment v-model="segmentValue" @ionChange="segmentChanged" class="custom-segment">
           <ion-segment-button value="accettati" class="segment-button">
@@ -18,7 +18,7 @@
 
     <ion-content class="ion-padding-horizontal">
       <!-- Prenotazioni Da Accettare -->
-      <p v-if="prenotazioniDaAccettare.length == 0 " style="display: flex; justify-content: center; align-items: center; height: 100vh; font-size: 18px; font-weight: bold; color: #555;">
+      <p v-if="prenotazioniDaAccettare.length === 0 " style="display: flex; justify-content: center; align-items: center; height: 100vh; font-size: 18px; font-weight: bold; color: #555;">
   Nessuna prenotazione disponibile
 </p>
       <div v-if="segmentValue === 'daAccettare'" class="section">
@@ -42,7 +42,7 @@
               
               <div class="prenotazione-details">
                 <div class="datetime-container">
-                  <p>Tocca l'orario per modificarlo</p>
+                  <p style="font-size:xx-small;color: orange;">Tocca l'orario per modificarlo</p>
                   <ion-datetime-button 
                     :datetime="'datetime-' + prenotazione.id" 
                     class="datetime-button"
@@ -124,7 +124,7 @@
       <!-- Prenotazioni Accettate -->
       <div v-if="segmentValue === 'accettati'" class="section">
 
-        <p v-if="prenotazioniAccettate.length == 0 " style="display: flex; justify-content: center; align-items: center; height: 100vh; font-size: 18px; font-weight: bold; color: #555;">
+        <p v-if="prenotazioniAccettate.length === 0 " style="display: flex; justify-content: center; align-items: center; height: 100vh; font-size: 18px; font-weight: bold; color: #555;">
   Nessuna prenotazione disponibile
 </p>
 
@@ -147,7 +147,7 @@
 
               <div class="prenotazione-details">
                 <div class="datetime-container">
-                  <p>Tocca l'orario per modificarlo</p>
+                  <p style="font-size:xx-small;color: orange;">Tocca l'orario per modificarlo</p>
                   <ion-datetime-button 
                     :datetime="'datetime-' + prenotazione.id" 
                     class="datetime-button"
@@ -608,6 +608,10 @@ onIonViewWillLeave(() => {
 .datetime-container{
   margin: 10px;
   scale: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .prenotazione-item {
   border: 1px solid orange;
@@ -615,6 +619,7 @@ onIonViewWillLeave(() => {
 }
 
 .segment-button {
+  margin-top: 10px;
   --border-radius: 8px;
   --background-checked: rgba(255, 255, 255, 0.2);
   --indicator-color: transparent;
@@ -624,12 +629,10 @@ onIonViewWillLeave(() => {
 .segment-label {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-weight: 500;
+  gap: 2px;
 }
 
 .badge {
-  background: rgba(255, 255, 255, 0.2);
   padding: 2px 8px;
   border-radius: 10px;
   font-size: 0.8em;
@@ -643,9 +646,6 @@ onIonViewWillLeave(() => {
   transition: transform 0.2s ease;
 }
 
-.prenotazione-card:active {
-  transform: scale(0.98);
-}
 
 .card-header {
   display: flex;
@@ -680,7 +680,6 @@ onIonViewWillLeave(() => {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: var(--ion-color-danger);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
@@ -730,9 +729,7 @@ onIonViewWillLeave(() => {
 .decision-buttons,
 .prenotazione-actions {
   display: flex;
-  justify-content: flex-start;
-  gap: 6px;
-  flex-wrap: wrap; /* Permette ai pulsanti di andare a capo se non c'è spazio */
+  gap: 3px;
   overflow: visible;
 }
 .action-buttons {
@@ -743,15 +740,11 @@ onIonViewWillLeave(() => {
 
 .order-button {
   --border-radius: 12px;
-  --padding-top: 14px;
-  --padding-bottom: 14px;
-  font-weight: 500;
 }
 
 .decision-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 8px;
   overflow:visible
 }
 
@@ -772,10 +765,6 @@ onIonViewWillLeave(() => {
 }
 
 /* Modale Ordine */
-.order-modal {
-  --border-radius: 16px;
-  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
 
 .modal-header {
   --border-radius: 16px 16px 0 0;
@@ -783,7 +772,6 @@ onIonViewWillLeave(() => {
 
 .order-content {
   background-color: #2ecc71;
-
 }
 
 .order-item {
@@ -793,7 +781,7 @@ onIonViewWillLeave(() => {
   flex-wrap:wrap;
   background: rgb(254, 241, 222);
   border-radius: 12px;
-  transition: all 0.2s ease;
+  left: 0px;
 }
 
 .order-item:active {
@@ -880,5 +868,9 @@ onIonViewWillLeave(() => {
 
 .prenotazioni-container {
   animation: slideIn 0.3s ease-out;
+}
+
+ion-datetime{
+  --background: rgba(255, 255, 255, 0.65);
 }
 </style>

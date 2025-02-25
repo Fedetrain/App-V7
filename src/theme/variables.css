@@ -53,14 +53,7 @@
     --ion-color-danger-shade: #cf083b;
     --ion-color-danger-tint: #e92f60;
   
-    /** dark **/
-    --ion-color-dark: #1d1d1d;
-    --ion-color-dark-rgb: 29, 29, 29;
-    --ion-color-dark-contrast: #ffffff;
-    --ion-color-dark-contrast-rgb: 255, 255, 255;
-    --ion-color-dark-shade: #171717;
-    --ion-color-dark-tint: #333333;
-  
+
     /** medium **/
     --ion-color-medium: #6b6b6b;
     --ion-color-medium-rgb: 107, 107, 107;
@@ -72,7 +65,7 @@
     /** light **/
     --ion-color-light: #f2f2f2;
     --ion-color-light-rgb: 242, 242, 242;
-    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast: #e27108a8;
     --ion-color-light-contrast-rgb: 0, 0, 0;
     --ion-color-light-shade: #d9d9d9;
     --ion-color-light-tint: #f5f5f5;
@@ -118,7 +111,6 @@
   
       --ion-color-warning: #ff6f00;
       --ion-color-warning-rgb: 255, 111, 0;
-      --ion-color-warning-contrast: #000000;
       --ion-color-warning-contrast-rgb: 0, 0, 0;
       --ion-color-warning-shade: #e66500;
       --ion-color-warning-tint: #ff7f33;
@@ -132,7 +124,6 @@
   
       --ion-color-dark: #f2f2f2;
       --ion-color-dark-rgb: 242, 242, 242;
-      --ion-color-dark-contrast: #000000;
       --ion-color-dark-contrast-rgb: 0, 0, 0;
       --ion-color-dark-shade: #d9d9d9;
       --ion-color-dark-tint: #f5f5f5;
@@ -144,16 +135,7 @@
       --ion-color-medium-shade: #5e5e5e;
       --ion-color-medium-tint: #7b7b7b;
   
-      --ion-color-light: #1d1d1d;
-      --ion-color-light-rgb: 29, 29, 29;
-      --ion-color-light-contrast: #ffffff;
-      --ion-color-light-contrast-rgb: 255, 255, 255;
-      --ion-color-light-shade: #171717;
-      --ion-color-light-tint: #333333;
+
     }
   
-    /*
-     * iOS Dark Theme
-     * -------------------------------------------
-     */
 }
